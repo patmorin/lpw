@@ -21,7 +21,7 @@
 \definecolor{linkblue}{named}{Blue}
 \hypersetup{colorlinks=true, linkcolor=linkblue,  anchorcolor=linkblue,
 citecolor=linkblue, filecolor=linkblue, menucolor=linkblue,
-urlcolor=linkblue} 
+urlcolor=linkblue}
 %\setlength{\parskip}{1ex}
 \usepackage{wasysym}
 
@@ -63,7 +63,7 @@ urlcolor=linkblue}
 \author{Vida Dujmović%
   \thanks{Deparment of Computer Science and Electrical Engineering, University of Ottawa}\qquad
   Pat Morin%
-  \thanks{School of Computer Science, Carleton University}\qquad 
+  \thanks{School of Computer Science, Carleton University}\qquad
   Céline Yelle\footnotemark[2]}
 
 \date{}
@@ -89,8 +89,8 @@ urlcolor=linkblue}
 \begin{abstract}
   Layered pathwidth is a new graph parameter studied by Bannister \etal\ (2015). In this paper we present two new results relating layered pathwidth to two types of linear layouts.  Our first result shows that, for any graph $G$, the stack number of $G$ is at most four times the layered pathwidth of $G$.   Our second result shows that any graph $G$ with track number at most three has layered pathwidth at most four.  The first result complements a result of Dujmović and Frati (2018) relating layered treewidth and stack number.  The second result solves an open problem posed by Bannister \etal\ (2015).
   % We investigate a relationship between layered pathwidth and track  number and layered pathwidth and stack number. It was known that graphs that have bounded layered pathwidth have bounded queue number and thus bounded track number (Bannister, Devanny, Dujmović,  Eppstein, and Wood [GD 2015, Algorithmica 2018]).  In the other direction, graphs with track number at most 2 are forests of caterpillars and have layered pathwidth at most 2.
-  % However, the existence of 4-track graphs that are expanders (Dujmović, Sidiropoulos and Wood [Chicago J. Theor. Comput. Sci. 2016]) implies that there are 4-track graphs whose layered pathwidth is $\Omega(n/\log n)$.  
-  % 
+  % However, the existence of 4-track graphs that are expanders (Dujmović, Sidiropoulos and Wood [Chicago J. Theor. Comput. Sci. 2016]) implies that there are 4-track graphs whose layered pathwidth is $\Omega(n/\log n)$.
+  %
   % These results leave a gap for 3-track graphs. Indeed, Bannister \etal\ conjecture that  3-track graphs have bounded layered
   % pathwidth.  The main result of the current paper is to confirm this
   % conjecture by showing that 3-track graphs have layered pathwidth at most 4. In a similar vein, the current paper also completes our knowledge about the
@@ -112,11 +112,11 @@ number of longstanding problems on planar graphs and their generalizations, incl
 
 
 % % closing a 27 year old conjecture on queue
-% layouts 
+% layouts
 %the following related graph drawing problems: queue number, stack
 %number and 3D drawings of linear volume
- % \cite{DBLP:journals/corr/abs-1904-04791,DBLP:journals/corr/abs-1904-05269}. 
- 
+ % \cite{DBLP:journals/corr/abs-1904-04791,DBLP:journals/corr/abs-1904-05269}.
+
 Motivated
 by the versatility and utility of layered treewidth, Bannister
 %successes brought on by the introduction and study of layered treewidth,  Bannister
@@ -188,8 +188,8 @@ After introducing layered path-decompositions, Bannister \etal\ \cite{DBLP:conf/
 out to understand the relationship between track/queue/stack number and
 layered pathwidth.
 
-A \emph{$t$-track layout} of a graph 
-$G$ is a partition of $V(G)$ into $t$ ordered independent sets $T_1,\ldots,T_t$ (with a total order $\prec_i$ for each $T_i$, $i\in\{1,\ldots,t\}$) with no X-crossings. Here an \emph{X-crossing} is a pair of edges $vw$ and $xy$ such that, for some $i,j\in\{1,\ldots,t\}$, $v,x\in T_i$ with $v\prec_i x$ and $w,y\in T_j$ with $y\prec_j w$. The minimum number of tracks in any $t$-track layout of $G$ is called the \emph{track number} of $G$ and is denoted as $\tr(G)$. A \emph{$t$-track graph} is a graph that has a $t$-track layout. 
+A \emph{$t$-track layout} of a graph
+$G$ is a partition of $V(G)$ into $t$ ordered independent sets $T_1,\ldots,T_t$ (with a total order $\prec_i$ for each $T_i$, $i\in\{1,\ldots,t\}$) with no X-crossings. Here an \emph{X-crossing} is a pair of edges $vw$ and $xy$ such that, for some $i,j\in\{1,\ldots,t\}$, $v,x\in T_i$ with $v\prec_i x$ and $w,y\in T_j$ with $y\prec_j w$. The minimum number of tracks in any $t$-track layout of $G$ is called the \emph{track number} of $G$ and is denoted as $\tr(G)$. A \emph{$t$-track graph} is a graph that has a $t$-track layout.
 
 A \emph{stack (queue) layout} of a graph $G$ consists of a total order
 $\sigma$ of $V(G)$ and a partition of $E(G)$ into  sets, called
@@ -199,10 +199,10 @@ $vw$ and $xy$ in a single stack with $v\prec_\sigma x\prec_\sigma w\prec_\sigma 
 (\emph{nest}; there are no edges $vw$ and $xy$ in a single queue with $v\prec_\sigma
 x\prec_\sigma y\prec_\sigma w$.).  The minimum number of stacks (queues) in a
 stack (queue) layout of $G$ is the \emph{stack number} (the
-\emph{queue number}) of $G$ and is denoted as $\sn(G)$ ($\qn(G)$). A stack layout is also called a {\em book embedding} and stack number is also called {\em book thickness} and {\em page number}. An \emph{$s$-stack graph} (\emph{$q$-queue graph}) is a graph that has a stack (queue) layout with at most $s$ ($q$) queues. 
+\emph{queue number}) of $G$ and is denoted as $\sn(G)$ ($\qn(G)$). A stack layout is also called a {\em book embedding} and stack number is also called {\em book thickness} and {\em page number}. An \emph{$s$-stack graph} (\emph{$q$-queue graph}) is a graph that has a stack (queue) layout with at most $s$ ($q$) queues.
 
-\subsection{Summary of (Old and New) Results} 
-A summary of known and new results on these rich relationships between layered pathwidth, queue number, stack number, and track number are outlined in \tabref{summary}.  The first two rows show (the older results) that track number and queue number are \emph{tied}; each is bounded by some function of the other.  
+\subsection{Summary of (Old and New) Results}
+A summary of known and new results on these rich relationships between layered pathwidth, queue number, stack number, and track number are outlined in \tabref{summary}.  The first two rows show (the older results) that track number and queue number are \emph{tied}; each is bounded by some function of the other.
 
 \begin{table}[H]
   \begin{center}
@@ -210,41 +210,41 @@ A summary of known and new results on these rich relationships between layered p
       \multicolumn{2}{|l|}{Queue-Number versus Track-Number} \\ \hline
       $\qn(G) \le \tn(G)-1$ & \cite[Theorem~2.6]{dmw05} \\
       $\tn(G) \le 2^{O(\qn(G)^2)}$ & \cite[Theorem~8]{dpw04} \\ \hline
-      \multicolumn{2}{l}{} \\ 
-      % 
+      \multicolumn{2}{l}{} \\
+      %
       % $\qn(G) \le 1 \Rightarrow \lpw(G)\le 2$ & \cite[Theorem~3.2]{HR-SJC92}\cite[Corollary~7]{bannister2018track} \\
-      % $\exists G : \qn(G)=2,\, \lpw(G)=\omega(1)$ 
+      % $\exists G : \qn(G)=2,\, \lpw(G)=\omega(1)$
       % & ($G$ is a grid plus an apex vertex) \\[1ex]
       %
       \hline
       \multicolumn{2}{|l|}{Queue-Number versus Layered Pathwidth} \\ \hline
-      $\qn(G) \le 3\lpw(G)-1$ & \cite[Theorem~2.6]{dmw05}\cite[Lemma~9]{bannister2018track} \\    
-      $\qn(G) = 1 \Rightarrow \lpw(G)\le 2$ & 
+      $\qn(G) \le 3\lpw(G)-1$ & \cite[Theorem~2.6]{dmw05}\cite[Lemma~9]{bannister2018track} \\
+      $\qn(G) = 1 \Rightarrow \lpw(G)\le 2$ &
       \cite[Theorem~3.2]{HR-SJC92}\cite[Corollary~7]{bannister2018track} \\
-      % $\exists G : \qn(G)=2,\, \lpw(G)=\Omega(\log n)$ 
-      % & ($G$ is a binary tree plus apex vertex) \\ 
-      $\exists G : \qn(G)=2,\, \lpw(G)=\Omega((n/\log n)$ 
+      % $\exists G : \qn(G)=2,\, \lpw(G)=\Omega(\log n)$
+      % & ($G$ is a binary tree plus apex vertex) \\
+      $\exists G : \qn(G)=2,\, \lpw(G)=\Omega((n/\log n)$
       & \cite[Theorem~1.4]{dsw16} \\ \hline
-      \multicolumn{2}{l}{} \\ 
+      \multicolumn{2}{l}{} \\
       %
       \hline
       \multicolumn{2}{|l|}{Stack-Number versus Layered Pathwidth} \\ \hline
-      $\sn(G) \le 1 \Rightarrow \lpw(G) \le 2$  
+      $\sn(G) \le 1 \Rightarrow \lpw(G) \le 2$
       & \cite[Corollary~16]{bannister2018track} \\
-      $\exists G: \sn(G)=2,\, \lpw(G) = \Omega(\log n)$ 
+      $\exists G: \sn(G)=2,\, \lpw(G) = \Omega(\log n)$
       & ($G$ is a binary tree plus an apex vertex)\\
-      $\exists G: \sn(G)=3,\, \lpw(G) = \Omega(n/\log n)$ 
-      & \cite[Theorem~1.5]{dsw16} \\ 
+      $\exists G: \sn(G)=3,\, \lpw(G) = \Omega(n/\log n)$
+      & \cite[Theorem~1.5]{dsw16} \\
       $\sn(G) \le 4\lpw(G)$ & \textbf{\thmref{stacknumber}} \\ \hline
-      \multicolumn{2}{l}{} \\ 
+      \multicolumn{2}{l}{} \\
       %
       \hline
       \multicolumn{2}{|l|}{Track-Number versus Layered Pathwidth} \\ \hline
-      $\tn(G) \le 3\lpw(G)$ & \cite[Lemma~9]{bannister2018track} \\    
+      $\tn(G) \le 3\lpw(G)$ & \cite[Lemma~9]{bannister2018track} \\
       $\tn(G) = 1 \Rightarrow \lpw(G)= 1$ & ($G$ has no edges) \\
       $\tn(G) \le 2\Rightarrow \lpw(G) \le 2$ & ($G$ is a forest of caterpillars) \\
       $\tn(G) \le 3\Rightarrow \lpw(G) \le 4$ & \textbf{\thmref{main}} \\
-      $\exists G : \tn(G)=4,\, \lpw(G)=\Omega((n/\log n)$ 
+      $\exists G : \tn(G)=4,\, \lpw(G)=\Omega((n/\log n)$
       & \cite[Theorem~1.5]{dsw16} \\ \hline
     \end{tabular}
   \end{center}
@@ -277,7 +277,7 @@ Note that minor-closed classes that have bounded layered pathwidth have been cha
 We conclude this discussion by remarking that similar upper bounds for graphs of bounded layered \emph{treewidth} are not yet known, and present a challenging avenue for further study.  For example, $k$-planar graphs are known to have layered treewidth $O(k)$ \cite[Theorem~3.1]{DBLP:journals/siamdm/DujmovicEW17}.  Therefore, bounding stack number by a function of layered treewidth would imply that $k$-planar graphs have bounded stack-number. It is still unknown whether $k$-planar graphs have bounded stack-number except in the case $k=1$ \cite{DBLP:journals/algorithmica/BekosBKR17,DBLP:journals/corr/AlamBK15}.
 
 
-% In the rest of the paper we prove \thmref{stacknumber} and \thmref{main}. 
+% In the rest of the paper we prove \thmref{stacknumber} and \thmref{main}.
 
  % The full proofs of Theorems~\ref{thm:main} and \ref{thm:stacknumber} are included in the appendix.
 
@@ -285,22 +285,22 @@ We conclude this discussion by remarking that similar upper bounds for graphs of
 % \centerline{snip?}
 % \hrule
 
-% 
-% A complete binary tree with $n$ leaves plus an apex vertex has stack number 2 but pathwidth $ has stack number 1, but pathwidth $\Omega(\log n)$. Adding an apex vertex increases the stack number to 2, but eliminates any layering with more than 3-layers 
-% 
-% 
-% , which is a minor-closed family of graphs that excludes 
-% $K_4$, which can be viewed as a 
-% 
-% 
+%
+% A complete binary tree with $n$ leaves plus an apex vertex has stack number 2 but pathwidth $ has stack number 1, but pathwidth $\Omega(\log n)$. Adding an apex vertex increases the stack number to 2, but eliminates any layering with more than 3-layers
+%
+%
+% , which is a minor-closed family of graphs that excludes
+% $K_4$, which can be viewed as a
+%
+%
 % outerplanar and therefore do not contain exclude a $K_4$
-% 
-% 
-% , but layered pathwidth is not bounded by track number, except when the track number is 1 or 2.    
+%
+%
+% , but layered pathwidth is not bounded by track number, except when the track number is 1 or 2.
 
 
 %
-%for every graph $G$, $\tr(G)\leq 3\lpw(G)$ and thus $\qn(G) < 3\lpw(G)$. 
+%for every graph $G$, $\tr(G)\leq 3\lpw(G)$ and thus $\qn(G) < 3\lpw(G)$.
 % In the other direction $1$-queue graphs are known to be arched leveled
 % planar \cite{HR-SJC92} and they thus have bounded layered pathwidth by the
 % results in \cite{DBLP:conf/gd/BannisterDDEW16,bannister2018track}.%
@@ -327,15 +327,15 @@ We conclude this discussion by remarking that similar upper bounds for graphs of
 % a minor) \cite{DBLP:journals/corr/abs-1810-08314}. However, this result could not have been used to answer this
 % conjecture since 3-track graphs are not closed under taking
 % minors. \footnote{To see that, start with an $ n\, \times\, n$ planar grid. Every planar grid has a 3-track
-% layout. However, for big enough $n$, one can contract/delete edges on this grid graph such that the result is a 
+% layout. However, for big enough $n$, one can contract/delete edges on this grid graph such that the result is a
 % series-parallel graph that does not have a 3-track layout (in particular the series-parallel graph from Theorem 18
 % in \cite{bannister2018track}).}
-% 
+%
 % \begin{thm}
 %  Every graph $G$ that has $\tr(G)\le 3$, has $\lpw(G)\le 4$.
 % \end{thm}
-% 
-% 
+%
+%
 % Finally, consider the relationship between stack number and layered
 % pathwidth. $1$-stack graphs are outerplanar. The class of outerplanar graphs is
 % minor closed and excludes an apex star with 3 leaves as a minor, so
@@ -351,11 +351,11 @@ We conclude this discussion by remarking that similar upper bounds for graphs of
 % to the appendix. The theorem, for example, implies that unit-disk graphs with the maximum
 % clique size $k$ have stack number $O(k)$ since they have been shown to
 % have $O(k)$ layered treewidth (FIXME: pathwidth, right?) \cite{DBLP:conf/gd/BannisterDDEW16,bannister2018track}.
-% 
+%
 % \begin{thm}
 %  Every graph $G$ that has stack number at most $4 \lpw(G)$.
 % \end{thm}
-% 
+%
 % The relationship between layered treewidth and these graph drawing
 % parameters is still not fully understood. In particular it is not
 % known if graphs of bounded layered treewidth have bounded queue
@@ -369,7 +369,7 @@ We conclude this discussion by remarking that similar upper bounds for graphs of
 
 Let $G$ be any graph, let $B=B_1,\ldots,B_p$ be a path decomposition of $G$, and $\ell:V(G)\to\Z$ be a layering that obtains so that $B$ has layered width $\lpw(G)$ with respect to the layering $\ell$.
 
-We may assume that $B$ is \emph{left-normal} in the sense that, for every distinct pair $v,w\in V(G)$, $\min\{i\in\Z : v\in B_i\} \neq \min\{i\in\Z:w\in B_i\}$. It is straightforward to verify that any path decomposition can be made left-normal without increasing the layered width of the decomposition. 
+We may assume that $B$ is \emph{left-normal} in the sense that, for every distinct pair $v,w\in V(G)$, $\min\{i\in\Z : v\in B_i\} \neq \min\{i\in\Z:w\in B_i\}$. It is straightforward to verify that any path decomposition can be made left-normal without increasing the layered width of the decomposition.
 We use the notation $v\prec_B w$ if $\min\{i\in\Z : v\in B_i\} < \min\{i\in\Z:w\in B_i\}$.  Since $B$ is left-normal, $\prec_B$ is a total order.
 
 For any edge $vw$ with $v\prec_B w$ we call $v$ the \emph{left endpoint} of the edge and $w$ the \emph{right endpoint}.  We use the convention of writing any edge with endpoints $v$ and $w$ as $vw$ where $v$ is the left endpoint and $w$ is the right endpoint.  With these definitions and conventions in hand, we are ready to proceed.
@@ -377,7 +377,7 @@ For any edge $vw$ with $v\prec_B w$ we call $v$ the \emph{left endpoint} of the 
 \begin{proof}[Proof of \thmref{stacknumber}]
   The following proof uses ideas
   Consider a left-normal path decomposition $B=B_1,\ldots,B_p$ of $G$ and a layering $\ell:V(G)\to\Z$ such that $B$ has layered width at most $k$ with respect to $\ell$.  Thus, our goal is to construct a stack layout of $G$ using $4k$ stacks.
-  
+
   We first construct a total ordering $\prec_\sigma$ on the vertices of $G$, as follows:
   \begin{itemize}
     \item If $v\in L_i$ and $w\in L_j$ with $i < j$, then $v\prec_\sigma w$.
@@ -388,22 +388,22 @@ For any edge $vw$ with $v\prec_B w$ we call $v$ the \emph{left endpoint} of the 
     \end{itemize}
   \end{itemize}
 
-  Next we define a colouring $\varphi:E(G)\to\{0,1\}\times\{0,1\}\times\{1,\ldots,k\}$ that determines the partition of the $E(G)$ into stacks.  We begin with a (greedy) vertex $k$-colouring $\varphi:V\to \lbrace 1,\ldots,k\rbrace$ so that, for any $i,j\in\N$, no two vertices in $B_i\cap L_j$ are assigned the same colour. This is easily done since, for each $j\in\Z$, the path decomposition $\langle B_i\cap L_j : i\in \Z\rangle$ has bags of size at most $k$.  
+  Next we define a colouring $\varphi:E(G)\to\{0,1\}\times\{0,1\}\times\{1,\ldots,k\}$ that determines the partition of the $E(G)$ into stacks.  We begin with a (greedy) vertex $k$-colouring $\varphi:V\to \lbrace 1,\ldots,k\rbrace$ so that, for any $i,j\in\N$, no two vertices in $B_i\cap L_j$ are assigned the same colour. This is easily done since, for each $j\in\Z$, the path decomposition $\langle B_i\cap L_j : i\in \Z\rangle$ has bags of size at most $k$.
 
   We say that an edge $vw$ has \emph{positive slope} if $\ell(v)=\ell(w)+1$ and has \emph{non-positive slope} otherwise.  We colour the edge $vw$ with the colour $\varphi(vw)=(a,b,c)$ where $a=\ell(v)\bmod 2$, $b$ is a bit indicating whether $vw$ has positive or non-positive slope, and $c$ is the colour $\varphi(v)$ of the left endpoint $v$.  This clearly uses only $2\times2\times k=4k$ colours so all that remains is to show that
-  $\sigma$ and the partition $P=\{\{vw\in E(G):\varphi(vw)=(a,b,c)\}:(a,b,c)\in \{0,1\}\times\{0,1\}\times\{1,\ldots,k\}\}$  is indeed a stack layout.  
+  $\sigma$ and the partition $P=\{\{vw\in E(G):\varphi(vw)=(a,b,c)\}:(a,b,c)\in \{0,1\}\times\{0,1\}\times\{1,\ldots,k\}\}$  is indeed a stack layout.
 
-  Consider any two distinct edges $vw,xy\in E(G)$ (whose left endpoints are $v$ and $x$, respectively).  First observe that, if $\ell(v)\equiv \ell(x)\pmod 2$ then either $\ell(v)=\ell(x)$ or $\ell(v)-\ell(x)\ge 2$. In the latter case, the only way in which $vw$ and $xy$ can cross with respect to $\prec_\sigma$ is if $\ell(v)+b = \ell(y)=\ell(w) = \ell(x)-b$ for some $b\in\{-1,1\}$. However, in this case, $vw$ has positive slope and $xy$ has non-positive slope, or vice-versa, so $\varphi(vw)$ and $\varphi(xy)$ differ in their second component.  
-  
+  Consider any two distinct edges $vw,xy\in E(G)$ (whose left endpoints are $v$ and $x$, respectively).  First observe that, if $\ell(v)\equiv \ell(x)\pmod 2$ then either $\ell(v)=\ell(x)$ or $\ell(v)-\ell(x)\ge 2$. In the latter case, the only way in which $vw$ and $xy$ can cross with respect to $\prec_\sigma$ is if $\ell(v)+b = \ell(y)=\ell(w) = \ell(x)-b$ for some $b\in\{-1,1\}$. However, in this case, $vw$ has positive slope and $xy$ has non-positive slope, or vice-versa, so $\varphi(vw)$ and $\varphi(xy)$ differ in their second component.
+
   Therefore, we only need to consider pairs of edges $xy$ and $vw$ where $\ell(v)=\ell(x)=i$. We assume, without loss of generality that $i$ is even
   and that $v\prec_\sigma x$.  With these assumptions, there are only three cases in which $vw$ and $xy$ can cross:
   \begin{enumerate}
-    \item $v\prec_\sigma x\prec_\sigma w\prec_\sigma y$. Since $\ell(v)=\ell(x)=i$ is even and $v\prec_\sigma x$, we have $v\prec_B x$ and $\ell(w)\ge i$.  If $\ell(w)=i$, then $v\prec_B x\prec_B w$, so $v$ and $x$ both appear in some bag $B_j$ and $\varphi(v)\neq\varphi(x)$, so $\varphi(vw)$ and $\varphi(xy)$ differ in their third component.  If $\ell(w)=i+1$, then $w\prec_\sigma y$ implies that $\ell(y)\ge\ell(w)$, which implies $\ell(y)=\ell(w)=i+1$, so $y\prec_B w$.  We now have $v\prec_B x\prec_B y\prec_B w$ so $v$ and $x$ appear in a common bag $B_j$ and $\varphi(vw)$ and $\varphi(xy)$ differ in their third component.  
-    
+    \item $v\prec_\sigma x\prec_\sigma w\prec_\sigma y$. Since $\ell(v)=\ell(x)=i$ is even and $v\prec_\sigma x$, we have $v\prec_B x$ and $\ell(w)\ge i$.  If $\ell(w)=i$, then $v\prec_B x\prec_B w$, so $v$ and $x$ both appear in some bag $B_j$ and $\varphi(v)\neq\varphi(x)$, so $\varphi(vw)$ and $\varphi(xy)$ differ in their third component.  If $\ell(w)=i+1$, then $w\prec_\sigma y$ implies that $\ell(y)\ge\ell(w)$, which implies $\ell(y)=\ell(w)=i+1$, so $y\prec_B w$.  We now have $v\prec_B x\prec_B y\prec_B w$ so $v$ and $x$ appear in a common bag $B_j$ and $\varphi(vw)$ and $\varphi(xy)$ differ in their third component.
+
     \item $v\prec_\sigma y\prec_\sigma w\prec_\sigma x$.  Since $v\prec_\sigma y$, $\ell(y)\ge \ell(v)=i$.  Similarly, since $y\prec_\sigma x$, $\ell(y)\le\ell(x)=i$.  Therefore, $\ell(y)=i$, so $y\prec_B x$.  This is not possible since, by definition, $x$ is the left endpoint of $xy$.
 
-    \item $y\prec_\sigma v\prec_\sigma x\prec_\sigma w$.  Since $y\prec_\sigma x$, $x$ is the left endpoint of $xy$, and $\ell(x)=i$ is even, we have $\ell(y)=\ell(x)-1$, so $xy$ has positive slope.  
-    
+    \item $y\prec_\sigma v\prec_\sigma x\prec_\sigma w$.  Since $y\prec_\sigma x$, $x$ is the left endpoint of $xy$, and $\ell(x)=i$ is even, we have $\ell(y)=\ell(x)-1$, so $xy$ has positive slope.
+
     Since $v\prec_\sigma w$ and $\ell(v)=i$ is even, we have $\ell(v)\le\ell(w)$, so $vw$ has non-positive slope.  Therefore $\varphi(vw)$ and $\varphi(xy)$ differ in their second component.
   \end{enumerate}
   Therefore, for any pair of edges $vw,xy\in E(G)$ that cross, $\varphi(vw)\neq\varphi(xy)$, so the partition $P$ is a partition of $V(G)$ into $4k$ stacks with respect to $\prec_\sigma$, as required.
@@ -420,36 +420,36 @@ For any edge $vw$ with $v\prec_B w$ we call $v$ the \emph{left endpoint} of the 
 %       \item $w\prec_\sigma v$ if $i$ is odd.
 %     \end{itemize}
 %   \end{itemize}
-% 
+%
 %   Next we define a colouring $\varphi:E(G)\to\{1,\ldots,4k\}$ that determines the partition of the $E(G)$ into stacks.
-%   We begin with a (greedy) vertex $k$-colouring $\varphi:V\to \lbrace 1,\ldots,k\rbrace$ so that, for any $i,j\in\N$, no two vertices in $B_i\cap L_j$ are assigned the same colour. This is easily done since the path decomposition $\langle B_i\cap L_j : i\in \Z\rangle$ has bags of size at most $k$.  
-% 
+%   We begin with a (greedy) vertex $k$-colouring $\varphi:V\to \lbrace 1,\ldots,k\rbrace$ so that, for any $i,j\in\N$, no two vertices in $B_i\cap L_j$ are assigned the same colour. This is easily done since the path decomposition $\langle B_i\cap L_j : i\in \Z\rangle$ has bags of size at most $k$.
+%
 %   We say that the edge $vw$ has \emph{positive slope} if $\ell(v)=\ell(w)+1$ and has \emph{non-positive slope} otherwise.  We colour the edge $vw$ with the colour $\varphi(vw)=(a,b,c)$ where $a=\ell(v)\bmod 2$, $b$ is a bit indicating whether $vw$ has positive or non-positive slope, and $c$ is the colour $\varphi(v)$ of the left endpoint $v$.  This clearly uses only $2\times2\times k=4k$ colours so all that remains is to show that
-%   $\sigma$ and the partition $\{\{vw\in E(G):\varphi(vw)=(a,b,c)\}:(a,b,c)\in \{0,1\}\times\{0,1\}\times\{1,\ldots,k\}\}$  is indeed a stack layout.  
-% 
+%   $\sigma$ and the partition $\{\{vw\in E(G):\varphi(vw)=(a,b,c)\}:(a,b,c)\in \{0,1\}\times\{0,1\}\times\{1,\ldots,k\}\}$  is indeed a stack layout.
+%
 %   Consider two edges $vw$ and $xy$ (whose left-endpoints are $v$ and $x$, respectively) and suppose without loss of generality that $v\prec_\sigma x\prec_\sigma w\prec_\sigma y$. We must show that $\varphi(vw)\neq\varphi(xy)$.  There are several cases to consider. In each case, $i$ is an integer and we assume, without loss of generality that $i$ is even.
 %   \begin{enumerate}
-%   \item $\ell(v)=\ell(x)=\ell(y)=i$. In this case $v\prec_B x\prec_B y$.    
+%   \item $\ell(v)=\ell(x)=\ell(y)=i$. In this case $v\prec_B x\prec_B y$.
 %   If $\ell(w)\neq i$, then either $w\prec_\sigma x$ or $y\prec_\sigma w$, which is not possible.  If $\ell(w)=i$, then $v \prec_B x\prec_B y\prec_B w$ so there exists some bag $B_j$ that contains both $v$ and $x$.  Therefore, $\varphi(v)\ne\varphi(x)$ and $\varphi(vw)$ and $\varphi(xy)$ differ in their third component.
-% 
+%
 %   \item $\ell(v)=\ell(x)=i$, $\ell(w)=\ell(y)=i\pm 1$.  Without loss of generality, we can assume that $\ell(w)=\ell(y)=i+1$.  In this case the assumption that $v\prec_\sigma x\prec_\sigma w\prec_\sigma y$ implies that $v \prec_B x \prec_B y\prec_B w$, and again $\varphi(vw)$ and $\varphi(xy)$ differ in their third component.
-% 
+%
 %   \item $\ell(v) = \ell(y) = i$ and $\ell(x)=\ell(w)=i\pm 1$.  In this case, $vw$ has positive slope and $xy$ has non-positive slope or vice-versa, so $\varphi(vw)$ and $\varphi(xy)$ differ in their second component.  (Also, $\ell(v)\not\equiv \ell(x)\pmod 2$, so $\varphi(vw)$ and $\varphi(xy)$ differ in their first component as well.)
-% 
+%
 %   \item $\ell(v) = \ell(x) = i$, $\ell(w)=i-b$, $\ell(w)=i+b$ for some $b\in\lbrace -1,1\rbrace$.  In this case, again $vw$ and $xy$ have positive and non-positive slopes, so $\varphi(vw)$ and $\varphi(xy)$ differ in their second component.
-% 
+%
 %   \item $\ell(v) = i-b$, $\ell(x)= i+b$, $\ell(w)=\ell(y)=i$ for some $b\in\lbrace -1,1\rbrace$.  In this case, again $vw$ and $xy$ have positive and negative slopes, so $\varphi(vw)$ and $\varphi(xy)$ differ in their second component.
-% 
+%
 %   \item $\ell(v)=i-1$, $\ell(w)=\ell(x)=i$, $\ell(y)=i+1$.  In this case $\ell(v)\not\equiv \ell(x)\pmod 2$ so $\varphi(vw)$ and $\varphi(xy)$ differ in their first component.
 % \end{enumerate}
-% 
+%
 % Note that $v\prec_\sigma x\prec_\sigma w\prec_\sigma y$ implies that $\lbrace \ell(v),\ell(w)\rbrace \cap \lbrace \ell(x),\ell(y)\rbrace \neq \emptyset$.  Therefore, the preceding is an exhaustive case analysis.
 % \end{proof}
 
 
 \section{Proof of \thmref{main}}
 
-Let $G$ be an edge-maximal $n$-vertex graph with $\tr(G)=3$.  
+Let $G$ be an edge-maximal $n$-vertex graph with $\tr(G)=3$.
 Here, $G$ is \emph{edge-maximal} if adding any edge $e$ icnreases the track number to four or more. It is
 helpful to recall that $G$ is a planar graph that has a straight-line
 crossing-free drawing with the vertices of $T_1$ placed on the positive x-axis,
@@ -486,7 +486,7 @@ the triangular face containing the origin and $x_{n_1},y_{n_2},z_{n_3}$
 form the cycle on the boundary of the outer face.
 From this point onward, all track indices are implicitly taken ``modulo 3''
 so that for any integer $i$, $T_i$ refers to the track $T_{i'}$ with
-index $i'=((i-1)\bmod 3)+1$.  
+index $i'=((i-1)\bmod 3)+1$.
 
 The following observation follows from the fact that $G$ is edge-maximal.
 \begin{obs}\obslabel{silly}
@@ -505,7 +505,7 @@ The following observation follows from the fact that $G$ is edge-maximal.
        \includegraphics{figs/silly-1} &
        \includegraphics{figs/silly-2} &
        \includegraphics{figs/silly-3} \\
-       (1) & (2) & (3) 
+       (1) & (2) & (3)
      \end{tabular}
    \end{center}
    \caption{The three cases in \obsref{silly}.}
@@ -517,7 +517,7 @@ The following observation follows from the fact that $G$ is edge-maximal.
 
 \begin{restatable}{lem}{main}\lemlabel{main}
   The edge-maximal 3-track graph $G$ with tracks $x_1,\ldots,x_{n_1}$, $y_1,\ldots,y_{n_2}$, and $z_1,\ldots,x_{n_3}$ described above has a 2-weak layered path
-  decomposition, $B_1,\ldots,B_p$, with a layering $\ell$ of (layered) pathwidth $2$ in which 
+  decomposition, $B_1,\ldots,B_p$, with a layering $\ell$ of (layered) pathwidth $2$ in which
   \begin{enumerate}
     \item for each $i\in\{1,2,3\}$ and each $v\in T_i$,
       $\ell(v)\equiv i\pmod 3$;
@@ -529,7 +529,7 @@ The following observation follows from the fact that $G$ is edge-maximal.
 \end{restatable}
 
 Before proving \lemref{main}, we show how it implies \thmref{main}.
-Since layered pathwidth is monotone with respect to the addition of edges, 
+Since layered pathwidth is monotone with respect to the addition of edges,
 it is safe to assume (as \lemref{main} does) that $G$ is edge-maximal.
 By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
 \lemref{weak}, $\lpw(G)\le 4$.
@@ -567,7 +567,7 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
   that neither $z_2$ nor $x_2$ exist.  However, since $|V(G)|\ge 5$, $n_2\ge 3$, so  this would imply that $x_1,z_1,y_2$ is a cut set with one vertex on
   each track, since its removal separates all $y_1$ from $y_3$.
 
-  We will construct a path $P=v_1,\ldots,v_r$, an example of which is illustrated in \figref{path}. The first vertex of $P$ will be one of  
+  We will construct a path $P=v_1,\ldots,v_r$, an example of which is illustrated in \figref{path}. The first vertex of $P$ will be one of
   $x_1,y_1,z_1$ and the final three vertices are $x_{n_1}$,
   $y_{n_2}$, and $z_{n_3}$, though not necessarily in that order.
   The path $P$ will \emph{spiral} in the sense that $v_i\in T_i$
@@ -581,7 +581,7 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
      \figlabel{path}
   \end{figure}
 
-  $P$ is constructed greedily: if $P$ has reached vertex $v_k$, it continues to the neighbouring vertex 
+  $P$ is constructed greedily: if $P$ has reached vertex $v_k$, it continues to the neighbouring vertex
   $v_{k+1}$ of $v_{k}$ with the highest index on track $T_{k+1}$ that is not yet in $P$.
   We will call this vertex $v_{k+1}$ the \emph{furthest neighbouring vertex} of $v_k$.  To see why this is always possible,
   recall that $P$ already contains an edge $v_{k-3},v_{k-2}$. Now, without loss of generality we can
@@ -594,7 +594,7 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
        \includegraphics[width=0.3\columnwidth]{figs/sloppy-1} &
        \includegraphics[width=0.3\columnwidth]{figs/sloppy-2} &
        \includegraphics[width=0.3\columnwidth]{figs/sloppy-3} \\
-       (1) & (2) & (3) 
+       (1) & (2) & (3)
      \end{tabular}
    \end{center}
    \caption{The path $P$ can always be extended.}
@@ -623,27 +623,27 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
   we set $\ell(v_i)=i$.  Note that this satisfies Conditions~3 and 5
   of the lemma and also satisfies Condition~1 for the vertices of $P$.
   For each $t\in\{1,2,3\}$, any vertex $v\in T_t$ that is not in
-  $P$ is assigned to the same layer as $v$'s immediate successor in $P\cap T_t$. 
-  This assignment satisfies Condition~1 for vertices not in $P$.  
+  $P$ is assigned to the same layer as $v$'s immediate successor in $P\cap T_t$.
+  This assignment satisfies Condition~1 for vertices not in $P$.
   Finally, we will prove that this gives a 2-weak layering of $G$. In other words,
   in the worst case, a vertex $v$ with $\ell(v)=i$ can only share an edge with vertex $u$ where  $i-2 \le \ell(u) \le i+2$.
-  
+
  Any edge between $v$ and $w$ where neither $v$ nor $w$ is in $P$ will only span one layer.
- Any edge between any two vertices $v_i$ and $v_j$ where $v_i, v_j \in P$, will span only one layer if $j = i\pm1$. 
+ Any edge between any two vertices $v_i$ and $v_j$ where $v_i, v_j \in P$, will span only one layer if $j = i\pm1$.
  This would mean that $v_{i}v_{j}$ is an edge in the graph $G$
  and that this edge was used to construct our furthest vertex path $P$.
  If $j \neq i\pm1$, then there are two cases:
    \begin{enumerate}
 	\item $j = i \pm 2$ Such an edge is possible, and allowed since it spans only two layers. % and would create a cut set. This edges will only span 2 layers since $\ell(v_i) = i$ and $\ell(v_j) = i+2$.
-	\item $j = i \pm 4$ Such an edge cannot exist since it would contradict our greedy path constructing algorithm. 
+	\item $j = i \pm 4$ Such an edge cannot exist since it would contradict our greedy path constructing algorithm.
 	If the edge $v_iv_{i+4}$ (or the edge $v_{i-4}v_i$) existed then the edge $v_i v_{i+1}$ ($v_{i-4}v_{i-3}$ ) would not have been added to $P$.
    \end{enumerate}
 
  Any edge between $v$ and $w$ where $v \in P$ and $w \not\in P$ will be one of 7 types (see \figref{2layermaximum}).
- Without loss of generality, assume the spiral is travelling from $T_1$ to $T_2$ to $T_3$. Let $x_i$ be a vertex on the constructed path $P$. 
+ Without loss of generality, assume the spiral is travelling from $T_1$ to $T_2$ to $T_3$. Let $x_i$ be a vertex on the constructed path $P$.
  First, we look at the possible cases for an edge between $x_i$ with $\ell(x_i) = m$ and $y_j$ where $y_j \notin P$.
- 
- 
+
+
  \renewcommand{\thesubfigure}{\arabic{subfigure}}
   \begin{figure}
     \begin{center}
@@ -660,14 +660,14 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
    \figlabel{2layermaximum}
  \end{center}
     \end{figure}
- 
+
   \begin{enumerate}
-  	\item$\ell(y_j) =  m+3n$ where $n \geq 1$. This edge cannot exist since it would contradict our greedy path constructing algorithm. 
+  	\item$\ell(y_j) =  m+3n$ where $n \geq 1$. This edge cannot exist since it would contradict our greedy path constructing algorithm.
   	\item$\ell(y_j) =  m+1$. This edge will only span one layer.
   	\item $\ell(y_j) = m+1-3n$ where $n \geq 1$. This edge cannot exist, since it would create a crossing with the edge $v_{m-3}v_{m-2}$.
   \end{enumerate}
-  
-  Second, we look at the possible cases for an edge between $x_i$ with $\ell(x_i) = m$ and $z_k$ where $z_k \notin P$. 
+
+  Second, we look at the possible cases for an edge between $x_i$ with $\ell(x_i) = m$ and $z_k$ where $z_k \notin P$.
  \begin{enumerate}
   \setcounter{enumi}{3}
   	\item $\ell(z_k) = m+2+3n$ where $n \geq 1$. This edge cannot exist, since it would create a crossing with the edge $v_{m+2}v_{m+3}$.
@@ -734,7 +734,7 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
 
   By a result of Bannister \etal\ \cite[Proof of
   Theorem~5]{bannister2018track}, $G-P$ has a layered
-  path decomposition $B_1,\ldots,B_p$ of width 1 using the layering 
+  path decomposition $B_1,\ldots,B_p$ of width 1 using the layering
   $\ell$ defined above.  If we add the vertices of $P$ to every bag
   of this decomposition we obtain a width-2 2-weak layered path
   decomposition of $G$.  Finally, to satisfy Conditions 2 and 4 of
@@ -742,36 +742,36 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
   $B_{p+1}=\{x_{n_1},y_{n_2},z_{n_3}\}$.
 \end{proof}
 
-% 
-% 
-% 
-% 
-% 
-% 
+%
+%
+%
+%
+%
+%
 % \begin{proof}[Sketch of proof of \lemref{main}]
-% % 
+% %
 % % In this section, we will only present a brief sketch of the proof of \lemref{main}, and have provided the complete proof of  in \appref{appendix}.
-% 
-% 
+%
+%
 %  % 1. The induction proof, the base case, and the induction step
-%  The proof is by induction on the number $|V(G)|$ of vertices.  
-%   If $|V(G)|\le 4$, then the result is trivial.  
-% 
+%  The proof is by induction on the number $|V(G)|$ of vertices.
+%   If $|V(G)|\le 4$, then the result is trivial.
+%
 %   Suppose that $G$ has
 %   a cut set $C=\{x_i,y_j,z_k\}$ having exactly one vertex in each track.
 %   Since $G$ is edge-maximal, $x_i,y_j,z_k$ form a cycle in $G$.  Now,
 %   the subgraph $G_1$ of $G$ induced by $\{x_1,\ldots,x_i, y_1,\ldots,y_j,
 %   z_1,\ldots,z_k\}$ is an edge-maximal graph with $\tr(G_1)=3$.
 %   Similarly, the subgraph $G_2$ of $G$ induced by $\{x_i,\ldots,x_{n_1},y_j,\ldots,y_{n_2},z_k,\ldots,z_{n_3}\}$ is edge-maximal with $\tr(G_2)=3$.  We can therefore apply the lemma inductively on each of $G_1$ and $G_2$. By appropriately relabelling $x$, $y$, and $z$ in $G_2$, Conditions~2 and 4 of the lemma ensure that the desired path decomposition of $G$ can be obtained by concatenating the path decompositions of $G_1$ and $G_2$.  Conditions~3 and 5 ensure that a layering of $G$ can be obtained by combining the layering of $G_1$ with (a shifted version) the layering of $G_2$.
-%   % 
-%   % 
-%   % 
+%   %
+%   %
+%   %
 %   %  and we
 %   % can inductively apply \lemref{main} to find a 2-weak layered
 %   % path decomposition of width 2 for $G_1$ in which $x_i,y_j,z_k$ are in the last bag
 %   % and are assigned to three consecutive distinct layers $r+1$, $r+2$, and $r+3$.
 %   % Note that there are three possible assignments of $x_i,y_j,z_k$ to
-%   % these three layers depending on the value of $r\bmod 3$. 
+%   % these three layers depending on the value of $r\bmod 3$.
 %   % For the subgraph $G_2$ induced by $\{x_i,\ldots,x_{n_1},y_j,\ldots,y_{n_2},z_k,\ldots,z_{n_3}\}$,
 %   % we apply \lemref{main} inductively, relabelling tracks to
 %   % ensure that in the resulting layered decomposition $\ell(y_j)=1$,
@@ -781,15 +781,15 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
 %   % the sequence of bags for $G_2$ gives a path decomposition of $G$
 %   % and adding $r$ to the indices of all layers in the layering of $G_2$
 %   % gives a 2-weak layering of $G$.
-% 
-% 
+%
+%
 %  % 2. The furthest vertex path P
-%  Thus, we can focus on case where $G$ has no separating triangle. In this case, we greedily construct a path $P= v_1, ..., v_r$. The first vertex of $P$ will be one 
-%  of $x_1, y_1, z_1$ and the last three vertices will be $x_{n_1}, y_{n_2}, z_{n_3}$. 
-%  For any $v_k \in P$, we select the next vertex $v_{k+1}$ by 
+%  Thus, we can focus on case where $G$ has no separating triangle. In this case, we greedily construct a path $P= v_1, ..., v_r$. The first vertex of $P$ will be one
+%  of $x_1, y_1, z_1$ and the last three vertices will be $x_{n_1}, y_{n_2}, z_{n_3}$.
+%  For any $v_k \in P$, we select the next vertex $v_{k+1}$ by
 % choosing the neighbouring vertex of $v_k$ on track $T_{k+1}$ with the highest index.
 % See \figref{g-p} for an example of the constructed path $P$.
-% 
+%
 % \begin{figure}[H]
 % \begin{center}
 % \begin{tabular}{cc}
@@ -800,17 +800,17 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
 % \caption{The graph $G-P$ is a levelled planar graph.}
 % \figlabel{g-p}
 % \end{figure}
-% 
-% 
+%
+%
 % % 3.  2-weak-layering
 % The 2-weak layering of $G$ is obtained as follows: For each vertex $v_i$ on $P$, we will set $\ell(v_i) = i$
 % For each $t\in\{1,2,3\}$, any vertex $v\in T_t$ that is not in $P$ is assigned to the same layer as $v$'s immediate successor in $P\cap T_t$.  That this is a 2-weak layering follows from straightforward analysis. (The only edges that span 2 layers are those incident to a vertex in $v\in T_{i-1}\setminus V(P)$ and a vertex $v_i\in T_{i}\cap V(P)$, where $v$ is further from the origin than $v_{i-1}$.)
-% % 
-% % 
-% % 
+% %
+% %
+% %
 % % Careful 2-weak layering of $G$. The proof for this is provided in the Appendix.
-% 
-% % 4.  G-P is levelled planar 
+%
+% % 4.  G-P is levelled planar
 % % Next, we will need a notion of levelled planar graphs. The class of levelled
 % % planar graphs was introduced in 1992 by Heath and Rosenberg
 % % \cite{HR-SJC92} in their study of queue layouts of graphs. A levelled
@@ -822,11 +822,11 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
 % % graph drawing, so called Sugiyama-style \cite{STT81,BM2001,HN2013,BETT99}.)
 % % Now, consider the graph $G-P$ obtained by removing the vertices of $P$
 % % from $G$ (see \figref{g-p}).  We claim that this graph is a levelled
-% % planar graph in which the levels of the vertices are given by the layering $\ell$ defined above. 
+% % planar graph in which the levels of the vertices are given by the layering $\ell$ defined above.
 % 
-% Next, we consider the graph $G-P$ obtained by removing the vertices of $P$ from $G$.  Clearly $\tr(G-P)\le 3$ and, since every edge of $G-P$ joins a pair of vertices in two consecutive layers, every cycle in $G-P$ has even length, so $G-P$ is bipartite. 
+% Next, we consider the graph $G-P$ obtained by removing the vertices of $P$ from $G$.  Clearly $\tr(G-P)\le 3$ and, since every edge of $G-P$ joins a pair of vertices in two consecutive layers, every cycle in $G-P$ has even length, so $G-P$ is bipartite.
 % By a result of Bannister \etal\ \cite[Proof of Theorem~5]{bannister2018track}, $G-P$ has a layered
-% path decomposition $B_1,\ldots,B_p$ of width 1 using the layering 
+% path decomposition $B_1,\ldots,B_p$ of width 1 using the layering
 % $\ell$ defined above.  If we add the vertices of $P$ to every bag
 % of this decomposition we obtain a width-2 2-weak layered path
 % decomposition of $G$.  Finally, to satisfy Conditions 2 and 4 of
@@ -837,6 +837,6 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
 
 % Bibliography
 \bibliographystyle{plainurl}
-\bibliography{journal-submission}
+\bibliography{lpw}
 
 \end{document}
