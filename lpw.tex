@@ -16,6 +16,8 @@
 \usepackage{thm-restate}
 \usepackage{float}
 
+\usepackage{paralist}
+
 %\usepackage[compact]{titlesec}
 
 \definecolor{linkblue}{named}{Blue}
@@ -137,13 +139,13 @@ layouts.  We begin by defining all these terms.
 % We first introduce these notions before discussing the known bounds.
 A {\em tree decomposition} of a graph $G$ is given by a tree $T$ whose
 nodes index a collection of sets $B_1,\ldots,B_p\subseteq V(G)$ called
-\emph{bags} such that (1) for each $v\in V(G)$, the set $T[v]$ of bags that contain $v$ induce a
+\emph{bags} such that (1) for each $v\in V(G)$, the set $T[v]$ of bags that contain $v$ induces a
      non-empty (connected) subtree in $T$; and (2)~for each edge $vw\in E(G)$, there is some bag that contains both $v$ and $w$. If $T$ is a path, the resulting decomposition is a called a \emph{path decomposition}. The \emph{width} of a tree (path)
    decomposition is the size of its largest bag.  The \emph{treewidth}
    (\emph{pathwidth}) of $G$, denoted $\tw(G)$ ($\pw(G)$), is the minimum width of any tree (path) decomposition of $G$ minus $1$.
 
    A \emph{layering} of $G$ is a mapping $\ell:V(G)\to\Z$ with the
-property that $vw\in E(G)$ implies $|\ell(u)-\ell(w)|\le 1$. One
+property that $vw\in E(G)$ implies $|\ell(v)-\ell(w)|\le 1$. One
 can also think of a layering as a partition of $G$'s vertices into
 sets indexed by integers, where $L_i=\{v\in V(G)
 : \ell(v)=i\}$ is called a  \emph{layer}.  A \emph{layered tree (path) decomposition} of $G$ consists
@@ -153,6 +155,14 @@ size of the intersection of a bag and a layer, i.e., $\max\{|L_i\cap
 B_j|:i\in\Z,\, j\in\{1,\ldots,p\}\}$.  The \emph{layered treewidth (pathwidth)} of
 $G$, denoted $\ltw(G)$ ($\lpw(G)$) is the smallest (layered) width of any layered
 tree (path) decomposition of $G$.
+
+\figref{grid} shows a layered path decomposition of a grid graph $G$ in which each pair of consecutive columns is contained in a common bag $B_i$ each row is contained in a single layer $L_j:=\{x\in V(G):\ell(x)=j\}$.  This decomposition shows that $G$ has layered pathwidth 2 since each bag $B_i$ contains two elements per layer $L_j$.
+\begin{figure}
+    \centering{\includegraphics{figs/grid}}
+    \caption{A width-2 layered path decomposition of the $5\times 5$ grid graph $G$.}
+    \figlabel{grid}
+\end{figure}
+
  % \footnote{Similar to the case of
  %  treewidth and pathwidth, Bannister \etal\
  %  \cite{DBLP:conf/gd/BannisterDDEW16,bannister2018track}  show that
@@ -160,10 +170,12 @@ tree (path) decomposition of $G$.
  %  pathwidth. In particular,  for every $n$-vertex graph $G$, $\lpw(G)\leq\ltw(G)\log_3(2n+1)$.}
 
 Note that while layered pathwidth is at most pathwidth, pathwidth is
-not bounded by layered pathwidth. There are graphs---for example the $n \times
+not bounded\footnote{We say that an integer-valued graph parameter $\mu$ is \emph{bounded} by some other integer-valued graph parameter $\nu$ if there exists a function $f:\N\to\N$ such that $\mu(G)\le f(\nu(G))$ for every graph $G$.} by layered pathwidth. There are graphs---for example the $n \times
 n$ planar grid---that have unbounded pathwidth and bounded layered
 pathwidth. Thus upper bounds proved in terms of layered pathwidth are
-quantitatively stronger than those proved in terms of pathwidth. In addition, while having pathwidth at most $k$ is a minor-closed property, having layered pathwidth at most $k$ is not.  For
+quantitatively stronger than those proved in terms of pathwidth. In addition, while having pathwidth at most $k$ is a minor-closed property,\footnote{A graph $H$ is a minor of a graph $G$ if a graph isomorphic to $H$ can be obtained from a
+subgraph of $G$ by contracting edges. A class $G$ of graphs is minor-closed if for every graph $G\in\mathcal{G}$, every minor of $G$
+is in $\mathcal{G}$. A minor-closed class is proper if it is not the class of all graphs.} having layered pathwidth at most $k$ is not.  For
 example, the $2 \times n \times n$ grid graph has layered pathwidth at most $3$ but
 it has  $K_n$ as a minor, and thus it has a minor of unbounded layered pathwidth. (Analogous statements hold for layered treewidth)
 
@@ -189,7 +201,7 @@ it has  $K_n$ as a minor, and thus it has a minor of unbounded layered pathwidth
 
 \subsection{Linear Layouts}
 
-After introducing layered path-decompositions, Bannister \etal\ \cite{DBLP:conf/gd/BannisterDDEW16,bannister2018track} set
+After introducing layered path decompositions, Bannister \etal\ \cite{DBLP:conf/gd/BannisterDDEW16,bannister2018track} set
 out to understand the relationship between track/queue/stack number and
 layered pathwidth.
 
@@ -204,10 +216,10 @@ $vw$ and $xy$ in a single stack with $v\prec_\sigma x\prec_\sigma w\prec_\sigma 
 (\emph{nest}; there are no edges $vw$ and $xy$ in a single queue with $v\prec_\sigma
 x\prec_\sigma y\prec_\sigma w$.).  The minimum number of stacks (queues) in a
 stack (queue) layout of $G$ is the \emph{stack number} (the
-\emph{queue number}) of $G$ and is denoted as $\sn(G)$ ($\qn(G)$). A stack layout is also called a {\em book embedding} and stack number is also called {\em book thickness} and {\em page number}. An \emph{$s$-stack graph} (\emph{$q$-queue graph}) is a graph that has a stack (queue) layout with at most $s$ ($q$) queues.
+\emph{queue number}) of $G$ and is denoted as $\sn(G)$ ($\qn(G)$). A stack layout is also called a {\em book embedding} and stack number is also called {\em book thickness} and {\em page number}. An \emph{$s$-stack graph} (\emph{$q$-queue graph}) is a graph that has a stack (queue) layout with at most $s$ stacks ($q$ queues).
 
 \subsection{Summary of (Old and New) Results}
-A summary of known and new results on these rich relationships between layered pathwidth, queue number, stack number, and track number are outlined in \tabref{summary}.  The first two rows show (the older results) that track number and queue number are \emph{tied}; each is bounded by some function of the other.
+A summary of known and new results on these rich relationships between layered pathwidth, queue number, stack number, and track number are outlined in \tabref{summary}.  The first two rows show (the older results) that track number and queue number are \emph{tied}; each is bounded by some function of the other \cite{dmw05,dpw04}.
 
 \begin{table}[H]
   \begin{center}
@@ -257,20 +269,17 @@ A summary of known and new results on these rich relationships between layered p
   \tablabel{summary}
 \end{table}
 
-The next group of rows relates queue number and layered pathwidth. Queue number is bounded by layered pathwidth.  Graphs with queue number 1 are arched-level planar graphs and have layered pathwidth at most 2.\footnote{Theorem~6 in \cite{bannister2018track} can easily be modified to
+The next group of rows relates queue number and layered pathwidth. Queue number is bounded by layered pathwidth \cite{dmw05}.  Graphs with queue number 1 are arched-levelled planar graphs\footnote{An \emph{arched leveled} planar embedding is one in which the vertices are placed on parallel lines (levels) and each edge either connects vertices on two consecutive levels or forms an arch that connects two vertices on the same level by looping around all previous levels.  A graph is arched levelled if it has an arched levelled planar embedding.} and have layered pathwidth at most 2.\footnote{Theorem~6 in \cite{bannister2018track} can easily be modified to
 prove that arched levelled planar graphs have layered
-pathwidth at most 2. That is achieved by adding the leftmost vertex of each level to each bag of the path decomposition.}  However, there are graphs with queue number 2 that are expanders; these graphs have pathwidth $\Omega(n)$ and diameter $O(\log n)$, so their layered pathwidth is $\Omega(n/\log n)$.  Thus, layered pathwidth is not bounded by queue number.
+pathwidth at most 2. That is achieved by adding the leftmost vertex of each level to each bag of the path decomposition.}  However, there are graphs with queue number 2 that are expanders; these graphs have pathwidth $\Omega(n)$ and diameter $O(\log n)$, so their layered pathwidth is $\Omega(n/\log n)$ \cite{dsw16}.  Thus, layered pathwidth is not bounded by queue number.
 
-The next group of rows examines the relationship between stack number and layered pathwidth.  Graphs of stack number at most 1 are exactly the outerplanar graphs, which have layered-pathwidth at most 2.  On the other hand, there are graphs of stack number 2 that have unbounded layered pathwidth.  Thus, in general, layered pathwidth is not bounded by stack number.  Our second result, \thmref{stacknumber}, shows that stack number is nevertheless bounded by layered pathwidth.
-
-\thmref{stacknumber}, for example, implies that unit-disk graphs with maximum clique size $k$ have stack number $O(k)$ since they have been shown to have $O(k)$ layered pathwidth \cite{DBLP:conf/gd/BannisterDDEW16,bannister2018track}.
+The next group of rows examines the relationship between stack number and layered pathwidth.  Graphs of stack number at most 1 are exactly the outerplanar graphs, which have layered-pathwidth at most 2 \cite{bannister2018track}.  On the other hand, there are graphs of stack number 2 that have unbounded layered pathwidth \cite{dsw16}.  Thus, in general, layered pathwidth is not bounded by stack number.  Our second result, \thmref{stacknumber}, shows that stack number is nevertheless bounded by layered pathwidth.
 
 \begin{thm}\thmlabel{stacknumber}
  For every graph $G$, $\sn(G)\le 4 \lpw(G)$.
 \end{thm}
 
-
-The final group of rows relates track number and layered pathwidth.  Track number is bounded by layered pathwidth.  Layered pathwidth is bounded by track number when the track number is 1, or 2, but is not bounded by track number when the track number is 4 or more.  The question of what happens for track number 3 is stated as an open problem by Bannister \etal\ \cite{bannister2018track}, who solved the special case when $G$ is bipartite and has track number 3.  Our \thmref{main} solves this problem completely by showing that graphs with track number at most 3 have layered pathwidth at most 4.
+The final group of rows relates track number and layered pathwidth.  Track number is bounded by layered pathwidth \cite{bannister2018track}.  Layered pathwidth is bounded by track number when the track number is 1, or 2, but is not bounded by track number when the track number is 4 or more \cite{bannister2018track}.  The question of what happens for track number 3 is stated as an open problem by Bannister \etal\ \cite{bannister2018track}, who solved the special case when $G$ is bipartite and has track number 3.  Our \thmref{main} solves this problem completely by showing that graphs with track number at most 3 have layered pathwidth at most 4.
 
 Note that minor-closed classes that have bounded layered pathwidth have been characterized (as classes of graphs that exclude an apex tree\footnote{A graph $G$ is an {\em apex tree} if it has a vertex $v$ such that $G-v$ is a forest. } as a minor) \cite{DBLP:journals/corr/abs-1810-08314}. However, this result could not have been used to prove \thmref{main} since the family of 3-track graphs is not closed under taking minors.\footnote{To see this, start with an $ n\, \times\, n$ planar grid. Every planar grid has a 3-track layout. However, for large enough $n$, one can contract/delete edges on this grid graph such that the result is a series-parallel graph that does not have a 3-track layout (in particular the series-parallel graph from Theorem 18 in \cite{bannister2018track}).}
 
@@ -278,8 +287,6 @@ Note that minor-closed classes that have bounded layered pathwidth have been cha
  Every graph $G$ that has $\tr(G)\le 3$, has $\lpw(G)\le 4$.
 \end{thm}
 
-
-We conclude this discussion by remarking that similar upper bounds for graphs of bounded layered \emph{treewidth} are not yet known, and present a challenging avenue for further study.  For example, $k$-planar graphs are known to have layered treewidth $O(k)$ \cite[Theorem~3.1]{DBLP:journals/siamdm/DujmovicEW17}.  Therefore, bounding stack number by a function of layered treewidth would imply that $k$-planar graphs have bounded stack-number. It is still unknown whether $k$-planar graphs have bounded stack-number except in the case $k=1$ \cite{DBLP:journals/algorithmica/BekosBKR17,DBLP:journals/corr/AlamBK15}.
 
 
 % In the rest of the paper we prove \thmref{stacknumber} and \thmref{main}.
@@ -380,36 +387,37 @@ We use the notation $v\prec_B w$ if $\min\{i\in\Z : v\in B_i\} < \min\{i\in\Z:w\
 For any edge $vw$ with $v\prec_B w$ we call $v$ the \emph{left endpoint} of the edge and $w$ the \emph{right endpoint}.  We use the convention of writing any edge with endpoints $v$ and $w$ as $vw$ where $v$ is the left endpoint and $w$ is the right endpoint.  With these definitions and conventions in hand, we are ready to proceed.
 
 \begin{proof}[Proof of \thmref{stacknumber}]
-  The following proof uses ideas
-  Consider a left-normal path decomposition $B=B_1,\ldots,B_p$ of $G$ and a layering $\ell:V(G)\to\Z$ such that $B$ has layered width at most $k$ with respect to $\ell$.  Thus, our goal is to construct a stack layout of $G$ using $4k$ stacks.
+  Consider a left-normal path decomposition $B=B_1,\ldots,B_p$ of $G$ and a layering $\ell:V(G)\to\Z$ such that $B$ has layered width at most $k$ with respect to $\ell$.  Our goal is to construct a stack layout of $G$ using $4k$ stacks.
 
   We first construct a total ordering $\prec_\sigma$ on the vertices of $G$, as follows:
-  \begin{itemize}
+  \begin{compactenum}[(Property 1)]
     \item If $v\in L_i$ and $w\in L_j$ with $i < j$, then $v\prec_\sigma w$.
     \item If $v,w\in L_i$ with $v \prec_B w$ then
-    \begin{itemize}
+    \begin{compactenum}[(a)]
       \item $v\prec_\sigma w$ if $i$ is even; or
       \item $w\prec_\sigma v$ if $i$ is odd.
-    \end{itemize}
-  \end{itemize}
+    \end{compactenum}
+  \end{compactenum}
 
   Next we define a colouring $\varphi:E(G)\to\{0,1\}\times\{0,1\}\times\{1,\ldots,k\}$ that determines the partition of the $E(G)$ into stacks.  We begin with a (greedy) vertex $k$-colouring $\varphi:V\to \lbrace 1,\ldots,k\rbrace$ so that, for any $i,j\in\N$, no two vertices in $B_i\cap L_j$ are assigned the same colour. This is easily done since, for each $j\in\Z$, the path decomposition $\langle B_i\cap L_j : i\in \Z\rangle$ has bags of size at most $k$.
 
-  We say that an edge $vw$ has \emph{positive slope} if $\ell(v)=\ell(w)+1$ and has \emph{non-positive slope} otherwise.  We colour the edge $vw$ with the colour $\varphi(vw)=(a,b,c)$ where $a=\ell(v)\bmod 2$, $b$ is a bit indicating whether $vw$ has positive or non-positive slope, and $c$ is the colour $\varphi(v)$ of the left endpoint $v$.  This clearly uses only $2\times2\times k=4k$ colours so all that remains is to show that
+  We say that an edge $vw$ has \emph{positive slope} if $\ell(v)=\ell(w)+1$ and has \emph{non-positive slope} otherwise.  We colour the edge $vw$ with the colour $\varphi(vw)=(a,b,c)$ where $a=\ell(v)\bmod 2$, $b\in\{0,1\}$ is a bit indicating whether $vw$ has positive ($b=1$) or non-positive ($b=0$) slope, and $c$ is the colour $\varphi(v)$ of the left endpoint $v$.  This clearly uses only $2\times2\times k=4k$ colours so all that remains is to show that
   $\sigma$ and the partition $P=\{\{vw\in E(G):\varphi(vw)=(a,b,c)\}:(a,b,c)\in \{0,1\}\times\{0,1\}\times\{1,\ldots,k\}\}$  is indeed a stack layout.
 
-  Consider any two distinct edges $vw,xy\in E(G)$ (whose left endpoints are $v$ and $x$, respectively).  First observe that, if $\ell(v)\equiv \ell(x)\pmod 2$ then either $\ell(v)=\ell(x)$ or $\ell(v)-\ell(x)\ge 2$. In the latter case, the only way in which $vw$ and $xy$ can cross with respect to $\prec_\sigma$ is if $\ell(v)+b = \ell(y)=\ell(w) = \ell(x)-b$ for some $b\in\{-1,1\}$. However, in this case, $vw$ has positive slope and $xy$ has non-positive slope, or vice-versa, so $\varphi(vw)$ and $\varphi(xy)$ differ in their second component.
+  Consider any two distinct edges $vw,xy\in E(G)$ (whose left endpoints are $v$ and $x$, respectively).  First observe that, if $\ell(v)\equiv \ell(x)\pmod 2$ then either $\ell(v)=\ell(x)$ or $\ell(v)-\ell(x)\ge 2$. In the latter case, the only way in which $vw$ and $xy$ can cross with respect to $\prec_\sigma$ is if $\ell(v)+b = \ell(y)=\ell(w) = \ell(x)-b$ for some $b\in\{-1,1\}$.  However, in this case, $vw$ has positive slope and $xy$ has non-positive slope, or vice-versa, so $\varphi(vw)$ and $\varphi(xy)$ differ in their second component.  For example, we could have $\ell(x)=2$, $\ell(v)=0$, and $b=1$, in which case $\ell(y)=\ell(w)=1$, in which case $xy$ has positive slope and $vw$ has non-positive (in face, negative) slope.
 
   Therefore, we only need to consider pairs of edges $xy$ and $vw$ where $\ell(v)=\ell(x)=i$. We assume, without loss of generality that $i$ is even
   and that $v\prec_\sigma x$.  With these assumptions, there are only three cases in which $vw$ and $xy$ can cross:
   \begin{enumerate}
-    \item $v\prec_\sigma x\prec_\sigma w\prec_\sigma y$. Since $\ell(v)=\ell(x)=i$ is even and $v\prec_\sigma x$, we have $v\prec_B x$ and $\ell(w)\ge i$.  If $\ell(w)=i$, then $v\prec_B x\prec_B w$, so $v$ and $x$ both appear in some bag $B_j$ and $\varphi(v)\neq\varphi(x)$, so $\varphi(vw)$ and $\varphi(xy)$ differ in their third component.  If $\ell(w)=i+1$, then $w\prec_\sigma y$ implies that $\ell(y)\ge\ell(w)$, which implies $\ell(y)=\ell(w)=i+1$, so $y\prec_B w$.  We now have $v\prec_B x\prec_B y\prec_B w$ so $v$ and $x$ appear in a common bag $B_j$ and $\varphi(vw)$ and $\varphi(xy)$ differ in their third component.
+    \item $v\prec_\sigma x\prec_\sigma w\prec_\sigma y$.
 
-    \item $v\prec_\sigma y\prec_\sigma w\prec_\sigma x$.  Since $v\prec_\sigma y$, $\ell(y)\ge \ell(v)=i$.  Similarly, since $y\prec_\sigma x$, $\ell(y)\le\ell(x)=i$.  Therefore, $\ell(y)=i$, so $y\prec_B x$.  This is not possible since, by definition, $x$ is the left endpoint of $xy$.
+    Since $\ell(v)=\ell(x)=i$ is even and $v\prec_\sigma x$, we have $v\prec_B x$  (by Property~2a) and $\ell(w)\ge i$ (by Property~1).  If $\ell(w)=i$, then $v\prec_B x\prec_B w$ (by Property~2a), so $v$ and $x$ both appear in some bag $B_j$ and $\varphi(v)\neq\varphi(x)$, so $\varphi(vw)$ and $\varphi(xy)$ differ in their third component.  If $\ell(w)=i+1$, then $w\prec_\sigma y$ implies that $\ell(y)\ge\ell(w)$ (by Property~1), which implies $\ell(y)=\ell(w)=i+1$, so $y\prec_B w$ (by Property~2b).  We now have $v\prec_B x\prec_B y\prec_B w$ so $v$ and $x$ appear in a common bag $B_j$ and $\varphi(vw)$ and $\varphi(xy)$ differ in their third component.
 
-    \item $y\prec_\sigma v\prec_\sigma x\prec_\sigma w$.  Since $y\prec_\sigma x$, $x$ is the left endpoint of $xy$, and $\ell(x)=i$ is even, we have $\ell(y)=\ell(x)-1$, so $xy$ has positive slope.
+    \item $v\prec_\sigma y\prec_\sigma w\prec_\sigma x$.  Since $v\prec_\sigma y$, $\ell(y)\ge \ell(v)=i$ (by Property~1).  Similarly, since $y\prec_\sigma x$, $\ell(y)\le\ell(x)=i$ (by Property~1).  Therefore, $\ell(y)=i$, so $y\prec_B x$ (by Property~2a).  This is not possible since, by definition, $x$ is the left endpoint of $xy$.
 
-    Since $v\prec_\sigma w$ and $\ell(v)=i$ is even, we have $\ell(v)\le\ell(w)$, so $vw$ has non-positive slope.  Therefore $\varphi(vw)$ and $\varphi(xy)$ differ in their second component.
+    \item $y\prec_\sigma v\prec_\sigma x\prec_\sigma w$.  Since $y\prec_\sigma x$, $ell(y)\le \ell(x)=i$ (by Property~1).  If $\ell(y)=i$ then, since $i$ is even, $y\prec_B x$ (by Property~2a) so it must be the case that $\ell(y)=i-1$. Since $x$ is the left endpoint of $xy$, $xy$ therefore has positive slope.
+
+    Since $v\prec_\sigma w$ and $\ell(v)=i$ is even, we have $\ell(v)\le\ell(w)$ (by Property~2a). Since $v$ is the left endpoint of $vw$, $vw$ therefore has non-positive slope.  Therefore $\varphi(vw)$ and $\varphi(xy)$ differ in their second component.
   \end{enumerate}
   Therefore, for any pair of edges $vw,xy\in E(G)$ that cross, $\varphi(vw)\neq\varphi(xy)$, so the partition $P$ is a partition of $V(G)$ into $4k$ stacks with respect to $\prec_\sigma$, as required.
 \end{proof}
@@ -540,8 +548,7 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
 \lemref{weak}, $\lpw(G)\le 4$.
 
 \begin{proof}[Proof of \lemref{main}]
-  The proof is by induction on the number of vertices of $G$.  If
-  $|V(G)|\le 4$, then the result is trivial, so assume from this point onward that $|V(G)|\ge 5$.  Next, suppose that $G$ has
+  If $|V(G)\le 4$, then the result is trivial so assume from this point onward that $|V(G)\ge 5$.  Next, suppose $V(G)$ contains
   a cut set $C=\{x_i,y_j,z_k\}$ having exactly one vertex in each track.
   Since $G$ is edge-maximal, $x_i,y_j,z_k$ form a cycle in $G$.  Now,
   the subgraph $G_1$ of $G$ induced by $\{x_1,\ldots,x_i, y_1,\ldots,y_j,
@@ -838,6 +845,14 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
 % the lemma, we prepend a bag $B_0=\{x_1,y_1,z_1\}$ and append a bag
 % $B_{p+1}=\{x_{n_1},y_{n_2},z_{n_3}\}$.
 % \end{proof}
+
+
+\section{Conclusions}
+
+We have presented two results on layered pathwidth that help complete our understanding of the relationship between layered pathwidth, stack number, and track number.  Graphs of bounded layered pathwidth include grids and certain types of intersection graphs.  \thmref{stacknumber}, for example, implies that unit-disk graphs with maximum clique size $k$ have stack number $O(k)$ since they have been shown to have $O(k)$ layered pathwidth \cite{DBLP:conf/gd/BannisterDDEW16,bannister2018track}.
+
+
+We conclude this discussion by remarking that upper bounds on the stack number of graphs of bounded layered \emph{treewidth} are not yet known, and present a challenging avenue for further study.  For example, $k$-planar graphs are known to have layered treewidth $O(k)$ \cite[Theorem~3.1]{DBLP:journals/siamdm/DujmovicEW17}.  Therefore, bounding stack number by a function of layered treewidth would imply that $k$-planar graphs have bounded stack-number. It is still unknown whether $k$-planar graphs have bounded stack-number except in the case $k=1$ \cite{DBLP:journals/algorithmica/BekosBKR17,DBLP:journals/corr/AlamBK15}.
 
 
 % Bibliography
