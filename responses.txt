@@ -1,0 +1,58 @@
+We are grateful to both referee's for their careful reading of the paper and for providing feedback that will certainly improve the final version of the paper.
+
+Referee A
+
+We have implemented all of the following minor comments provided by Referee A:
+
+- Line 115: delete "The following proof uses ideas"
+- Line 117: delete "Thus,"
+- Line 119: Call it Property 1
+- Line 120: Call it Property 2
+- Line 121: and 122: Call them Property 2a and 2b.
+- Line 130: I guess that this bit is 1 if the slope is positive and 0 if
+the slope is negative. Say it explicitly.
+- Lines 143-155: Recall the properties when you use them. (For example,
+In line 143 you have v <_B x according to Property 2a and in line 146
+you have y <_B w according to Property 2b).
+- Lines 134-139: Give an example. (I.e., if b=1 I think that v<y<w<x)
+- Observation 1: Turn it to a Lemma with a proof.
+- Line 196: The proof is not by induction.
+- Proof of Lemma 2: At the beginning of the proof I suggest to say
+directly that the first step of the proof is showing that you can always
+assume that |V(G)|>4 and that the graph does not contain a cut set.
+Then, you can proceed directly with the proof as it is.
+- Figure 8: This figure is never referenced in the paper. Reference it somewhere.
+- I suggest adding a section with the conclusions and open problems.
+
+
+Referee B
+
+To address one of the referee's major comment, we have added a conclusions section.  This section now summarizes, reports on the relevance of these results to unit disk graphs, and presents an open problem that was previously included at the end of Section 2.
+
+The referee also asks for more figures, including an illustration of a layered path decomposition and an illustration for the proof of Theorem 1.  We have added both of these.
+
+We have also implemented all of the following minor comments provided by referee B.  The only non-minor change involves the following comment about Lemma 1:
+
+- Line 169. "well-known". Please provide a reference
+
+Since the only only references we could find use this lemma in the context of layered treewidth (rather than pathwidth) we included a short proof.
+
+- Line 27. "induce" -> "induces"
+- Line 33. "\ell(u)" -> "\ell(v)"
+- Line 40. Please define "bounded"
+- Line 44. Please define "minor-closed"
+- Line 49. "path-decomposition" -> "path decomposition"
+- Line 64. "s (q) queues" -> "s stacks (q queues)"
+- Section 1.3. The table is very clear. I would report citations also in the text
+- Line 71. Please define "arched-level". In the note they are called "arched levelled", I suggest to uniform the notation
+- Line 79. "there are graphs of stack number 2 that have unbounded layered pathwidth". Graphs of stack number 3 too
+- Line 80. "Our second result" -> "Our first result"
+- Line 115. Remove "The following proof uses ideas"
+- Line 117. Remove "Thus"
+- Line 124. Remove "the"
+- Line 160. "icnreases" -> "increases"
+- Lines 161-163. Please write that T_1, T_2, and T_3 are tracks
+- Line 169. "well-known". Please provide a reference
+- Line 173. "i < j". Please add "1 \leq i,j \leq n_3"
+- Lines 175-176. This is not very clear: Are "T_i" and "T'_i" referred to vertices instead of tracks? I think that indices are a bit confusing, since the same indices are used for layers, tracks, and vertices. I suggest to use different indices
+- There is no reference to Figure 8 in the text

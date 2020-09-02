@@ -156,7 +156,7 @@ B_j|:i\in\Z,\, j\in\{1,\ldots,p\}\}$.  The \emph{layered treewidth (pathwidth)} 
 $G$, denoted $\ltw(G)$ ($\lpw(G)$) is the smallest (layered) width of any layered
 tree (path) decomposition of $G$.
 
-\figref{grid} shows a layered path decomposition of a grid graph $G$ in which each pair of consecutive columns is contained in a common bag $B_i$ each row is contained in a single layer $L_j:=\{x\in V(G):\ell(x)=j\}$.  This decomposition shows that $G$ has layered pathwidth 2 since each bag $B_i$ contains two elements per layer $L_j$.
+\figref{grid} shows a layered path decomposition of a grid with diagonals, $G$, in which each pair of consecutive columns is contained in a common bag $B_i$ each row is contained in a single layer $L_j:=\{x\in V(G):\ell(x)=j\}$.  This decomposition shows that $G$ has layered pathwidth 2 since each bag $B_i$ contains two elements per layer $L_j$.
 \begin{figure}
     \centering{\includegraphics{figs/grid}}
     \caption{A width-2 layered path decomposition of the $5\times 5$ grid graph $G$.}
@@ -273,7 +273,7 @@ The next group of rows relates queue number and layered pathwidth. Queue number 
 prove that arched levelled planar graphs have layered
 pathwidth at most 2. That is achieved by adding the leftmost vertex of each level to each bag of the path decomposition.}  However, there are graphs with queue number 2 that are expanders; these graphs have pathwidth $\Omega(n)$ and diameter $O(\log n)$, so their layered pathwidth is $\Omega(n/\log n)$ \cite{dsw16}.  Thus, layered pathwidth is not bounded by queue number.
 
-The next group of rows examines the relationship between stack number and layered pathwidth.  Graphs of stack number at most 1 are exactly the outerplanar graphs, which have layered-pathwidth at most 2 \cite{bannister2018track}.  On the other hand, there are graphs of stack number 2 that have unbounded layered pathwidth \cite{dsw16}.  Thus, in general, layered pathwidth is not bounded by stack number.  Our second result, \thmref{stacknumber}, shows that stack number is nevertheless bounded by layered pathwidth.
+The next group of rows examines the relationship between stack number and layered pathwidth.  Graphs of stack number at most 1 are exactly the outerplanar graphs, which have layered-pathwidth at most 2 \cite{bannister2018track}.  On the other hand, there are graphs of stack number 2 that have unbounded layered pathwidth \cite{dsw16}.  Thus, in general, layered pathwidth is not bounded by stack number.  Our first result, \thmref{stacknumber}, shows that stack number is nevertheless bounded by layered pathwidth.
 
 \begin{thm}\thmlabel{stacknumber}
  For every graph $G$, $\sn(G)\le 4 \lpw(G)$.
@@ -387,7 +387,13 @@ We use the notation $v\prec_B w$ if $\min\{i\in\Z : v\in B_i\} < \min\{i\in\Z:w\
 For any edge $vw$ with $v\prec_B w$ we call $v$ the \emph{left endpoint} of the edge and $w$ the \emph{right endpoint}.  We use the convention of writing any edge with endpoints $v$ and $w$ as $vw$ where $v$ is the left endpoint and $w$ is the right endpoint.  With these definitions and conventions in hand, we are ready to proceed.
 
 \begin{proof}[Proof of \thmref{stacknumber}]
+  This proof is illustrated in \figref{stack-layout}.
   Consider a left-normal path decomposition $B=B_1,\ldots,B_p$ of $G$ and a layering $\ell:V(G)\to\Z$ such that $B$ has layered width at most $k$ with respect to $\ell$.  Our goal is to construct a stack layout of $G$ using $4k$ stacks.
+  \begin{figure}
+      \centering{\includegraphics[width=.98\textwidth]{figs/stack-layout}}
+      \caption{Colourings used in the proof of \thmref{stacknumber}.}
+      \figlabel{stack-layout}
+  \end{figure}
 
   We first construct a total ordering $\prec_\sigma$ on the vertices of $G$, as follows:
   \begin{compactenum}[(Property 1)]
@@ -399,7 +405,7 @@ For any edge $vw$ with $v\prec_B w$ we call $v$ the \emph{left endpoint} of the 
     \end{compactenum}
   \end{compactenum}
 
-  Next we define a colouring $\varphi:E(G)\to\{0,1\}\times\{0,1\}\times\{1,\ldots,k\}$ that determines the partition of the $E(G)$ into stacks.  We begin with a (greedy) vertex $k$-colouring $\varphi:V\to \lbrace 1,\ldots,k\rbrace$ so that, for any $i,j\in\N$, no two vertices in $B_i\cap L_j$ are assigned the same colour. This is easily done since, for each $j\in\Z$, the path decomposition $\langle B_i\cap L_j : i\in \Z\rangle$ has bags of size at most $k$.
+  Next we define a colouring $\varphi:E(G)\to\{0,1\}\times\{0,1\}\times\{1,\ldots,k\}$ that determines a partition of the $E(G)$ into stacks.  We begin with a (greedy) vertex $k$-colouring $\varphi:V\to \lbrace 1,\ldots,k\rbrace$ so that, for any $i,j\in\N$, no two vertices in $B_i\cap L_j$ are assigned the same colour. This is easily done since, for each $j\in\Z$, the path decomposition $\langle B_i\cap L_j : i\in \Z\rangle$ has bags of size at most $k$.
 
   We say that an edge $vw$ has \emph{positive slope} if $\ell(v)=\ell(w)+1$ and has \emph{non-positive slope} otherwise.  We colour the edge $vw$ with the colour $\varphi(vw)=(a,b,c)$ where $a=\ell(v)\bmod 2$, $b\in\{0,1\}$ is a bit indicating whether $vw$ has positive ($b=1$) or non-positive ($b=0$) slope, and $c$ is the colour $\varphi(v)$ of the left endpoint $v$.  This clearly uses only $2\times2\times k=4k$ colours so all that remains is to show that
   $\sigma$ and the partition $P=\{\{vw\in E(G):\varphi(vw)=(a,b,c)\}:(a,b,c)\in \{0,1\}\times\{0,1\}\times\{1,\ldots,k\}\}$  is indeed a stack layout.
@@ -463,24 +469,11 @@ For any edge $vw$ with $v\prec_B w$ we call $v$ the \emph{left endpoint} of the 
 \section{Proof of \thmref{main}}
 
 Let $G$ be an edge-maximal $n$-vertex graph with $\tr(G)=3$.
-Here, $G$ is \emph{edge-maximal} if adding any edge $e$ icnreases the track number to four or more. It is
+Here, $G$ is \emph{edge-maximal} if adding any edge $e$ increases the track number to four or more. It is
 helpful to recall that $G$ is a planar graph that has a straight-line
-crossing-free drawing with the vertices of $T_1$ placed on the positive x-axis,
-the vertices of $T_2$ placed on the positive y-axis and the vertices of
-$T_3$ placed on the ray $\{(a,a):a<0\}$. See \figref{planar-view}.
-
-It will be easier to prove \thmref{main} for a weaker notion
-of layering.  An \emph{$s$-weak layering} of $G$ is a mapping
-$\ell:V(G)\to\Z$ with the property that, for every $vw\in E(G)$,
-$|\ell(v)-\ell(w)|\le s$.  The sets $L_i=\{v\in V(G): \ell(v)=i\}$
-are called \emph{layers}.  The terms \emph{$s$-weak layered path
-decomposition} and \emph{$s$-weak layered pathwidth} of $G$, denoted
-$\lpw_s(G)$, are defined the same way as layered path decompositions
-and layered pathwidth, but with respect to $s$-weak layerings of $G$. The following result is easy (and well-known):
-
-\begin{lem}\lemlabel{weak}
-  For any $s\in\N$, $\lpw(G) \le s\cdot\lpw_s(G)$.
-\end{lem}
+crossing-free drawing with the vertices of the track $T_1$ placed on the positive x-axis,
+the vertices of the track $T_2$ placed on the positive y-axis and the vertices of
+the track $T_3$ placed on the ray $\{(a,a):a<0\}$. See \figref{planar-view}.
 
 \begin{figure}
   \begin{center}
@@ -490,16 +483,36 @@ and layered pathwidth, but with respect to $s$-weak layerings of $G$. The follow
   \figlabel{planar-view}
 \end{figure}
 
+It will be easier to prove \thmref{main} for a weaker notion
+of layering.  An \emph{$s$-weak layering} of $G$ is a mapping
+$\ell:V(G)\to\Z$ with the property that, for every $vw\in E(G)$,
+$|\ell(v)-\ell(w)|\le s$.  The sets $L_i=\{v\in V(G): \ell(v)=i\}$
+are called \emph{layers}.  The terms \emph{$s$-weak layered path
+decomposition} and \emph{$s$-weak layered pathwidth} of $G$, denoted
+$\lpw_s(G)$, are defined the same way as layered path decompositions
+and layered pathwidth, but with respect to $s$-weak layerings of $G$. The following result is easy (and well-known in the context of layered treewidth):
+
+
+\begin{lem}\lemlabel{weak}
+  For any $s\in\N$, $\lpw(G) \le s\cdot\lpw_s(G)$.
+\end{lem}
+
+\begin{proof}
+    By definition there exists an $s$-weak layering $\ell:V(G)\to N$ that defines layers $L_i=\{v\in V(G):\ell(v)=i\}$, $i\in\Z$, and a path decomposition $B_1,\ldots,B_p$ of $G$ such that $|L_i\cap B_j|\le \lpw_s(G)$ for each $i\in\Z$ and $j\in\{1,\ldots,p\}$.
+
+    Let $\ell'(v)=\lfloor \ell(v)/s\rfloor$ for each $v\in V(G)$.  For any edge $vw\in E(G)$, $\ell(v)-\ell(w)\le s$, so $\ell'(v)-\ell'(w)\le 1$, so $\ell'$ is a layering of $G$.  For each $i\in\Z$, the layer $L_i'=\{v\in V(G):\ell'(v)=i\}=\bigcup_{t=0}^{s-1} L_{is+t}$.  Therefore, for each $i\in \Z$ and $j\in\{1,\ldots,p\}$, $L'_i\cap B_j\le\sum_{t=0}^{s-1} |L_{is+t}\cap B_j| \le s\cdot\lpw_s(G)$.  Thus, $\ell'$ and $B_1,\ldots,B_p$ are a layered path decomposition of $G$ of layered width at most $s\cdot\lpw_s(G)$, so $\lpw(G)\le s\cdot\lpw_s(G)$.
+\end{proof}
+
 Let $T_1,T_2,T_3$ be a 3-track layout of $G$ with
 $T_1=\{x_1,\ldots,x_{n_1}\}$, $T_2=\{y_1,\ldots,y_{n_2}\}$, and
 $T_3=\{z_1,\ldots,z_{n_3}\}$ and the total orders $\prec_1,\prec_2,\prec_3$
-are implicit so that, for example $z_i\prec_3 z_j$ if and only if $i<j$.
+are implicit so that, for example $z_i\prec_3 z_j$ if and only if $1\le i<j\le n_3$.
 In terms of \figref{planar-view}, this means that $x_1,y_1,z_1$ form
 the triangular face containing the origin and $x_{n_1},y_{n_2},z_{n_3}$
 form the cycle on the boundary of the outer face.
 From this point onward, all track indices are implicitly taken ``modulo 3''
-so that for any integer $i$, $T_i$ refers to the track $T_{i'}$ with
-index $i'=((i-1)\bmod 3)+1$.
+so that for any integer $j$, $T_j$ refers to the track $T_{j'}$ with
+index $j'=((j-1)\bmod 3)+1$.
 
 The following observation follows from the fact that $G$ is edge-maximal.
 \begin{obs}\obslabel{silly}
@@ -579,18 +592,31 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
   that neither $z_2$ nor $x_2$ exist.  However, since $|V(G)|\ge 5$, $n_2\ge 3$, so  this would imply that $x_1,z_1,y_2$ is a cut set with one vertex on
   each track, since its removal separates all $y_1$ from $y_3$.
 
-  We will construct a path $P=v_1,\ldots,v_r$, an example of which is illustrated in \figref{path}. The first vertex of $P$ will be one of
+  We will construct a path $P=v_1,\ldots,v_r$, an example of which is illustrated in \figref{graph-path}(a). The first vertex of $P$ will be one of
   $x_1,y_1,z_1$ and the final three vertices are $x_{n_1}$,
   $y_{n_2}$, and $z_{n_3}$, though not necessarily in that order.
   The path $P$ will \emph{spiral} in the sense that $v_i\in T_i$
   for all $i\in\{1,\ldots,r\}$.  Observe that this spiralling implies that the subsequence of vertices of $P$ on any track $T_i$ is increasing (getting further from the origin).
 
+  % \begin{figure}
+  %    \begin{center}
+  %       \includegraphics{figs/graph-2}
+  %    \end{center}
+  %    \caption{The path $P$ used in the proof of \lemref{main}.}
+  %    \figlabel{path}
+  % \end{figure}
+
   \begin{figure}
-     \begin{center}
-        \includegraphics{figs/graph-2}
-     \end{center}
-     \caption{The path $P$ used in the proof of \lemref{main}.}
-     \figlabel{path}
+  \begin{center}
+  \begin{tabular}{ccc}
+  \includegraphics[width=.31\textwidth]{figs/prism_graph-2} &
+  \includegraphics[width=.31\textwidth]{figs/prism_graph-3} &
+  \includegraphics[width=.31\textwidth]{figs/prism_graph-4} \\
+  (a) & (b) & (c)
+  \end{tabular}
+  \end{center}
+  \caption{A three track graph $G$ with (a)~the spiral curve, (b)~edges spanning two layers highlighted, (c) the levelled planar graph $G-P$.}
+  \figlabel{graph-path}
   \end{figure}
 
   $P$ is constructed greedily: if $P$ has reached vertex $v_k$, it continues to the neighbouring vertex
@@ -638,7 +664,7 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
   $P$ is assigned to the same layer as $v$'s immediate successor in $P\cap T_t$.
   This assignment satisfies Condition~1 for vertices not in $P$.
   Finally, we will prove that this gives a 2-weak layering of $G$. In other words,
-  in the worst case, a vertex $v$ with $\ell(v)=i$ can only share an edge with vertex $u$ where  $i-2 \le \ell(u) \le i+2$.
+  in the worst case, a vertex $v$ with $\ell(v)=i$ can only share an edge with vertex $u$ where  $i-2 \le \ell(u) \le i+2$.  See \figref{graph-path}(b).
 
  Any edge between $v$ and $w$ where neither $v$ nor $w$ is in $P$ will only span one layer.
  Any edge between any two vertices $v_i$ and $v_j$ where $v_i, v_j \in P$, will span only one layer if $j = i\pm1$.
@@ -700,7 +726,7 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
   graph drawing, known as a Sugiyama-style drawing \cite{STT81,BM2001,HN2013,BETT99}.)
 
   Now, consider the graph $G-P$ obtained by removing the vertices of $P$
-  from $G$ (see \figref{g-p}).  We claim that this graph is a levelled
+  from $G$ (see \figref{graph-path}(c)).  We claim that this graph is a levelled
   planar graph in which the levels
   of the vertices are given by the layering $\ell$ defined above. (Recall that the edges of $G$ spanning two layers all have at least one endpoint in $P$.)
   Refer to \figref{prism}. One way to see this is to imagine $G$
@@ -717,32 +743,21 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
   % See \figref{g-p} for an example of the constructed path $P$.
 
   \begin{figure}
-  \begin{center}
-  \begin{tabular}{cc}
-  \includegraphics{figs/graph-2}
-  \includegraphics{figs/graph-3}
-  \end{tabular}
-  \end{center}
-  \caption{The graph $G-P$ is a levelled planar graph.}
-  \figlabel{g-p}
-  \end{figure}
-
-  \begin{figure}
    \begin{center}
       \includegraphics[width=0.95\columnwidth]{figs/prism}
    \end{center}
    \caption{Cutting a prism along $P$ to obtain a levelled planar
-    drawing of $G-P$. Edges that span 2 layers are drawn in purple.}
+    drawing of $G-P$.}
    \figlabel{prism}
   \end{figure}
 
-  \begin{figure}
-   \begin{center}
-      \includegraphics{figs/prism_graph-3}
-   \end{center}
-   \caption{The graph G with the path P and edges that span 2 layers drawn in purple}
-   \figlabel{graph2layers}
-  \end{figure}
+  % \begin{figure}
+  %  \begin{center}
+  %     \includegraphics{figs/prism_graph-3}
+  %  \end{center}
+  %  \caption{The graph G with the path P and edges that span 2 layers drawn in purple}
+  %  \figlabel{graph2layers}
+  % \end{figure}
 
   By a result of Bannister \etal\ \cite[Proof of
   Theorem~5]{bannister2018track}, $G-P$ has a layered

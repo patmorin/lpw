@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.18">
-<info created="D:20200901120612" modified="D:20200902082545"/>
+<info created="D:20200901120612" modified="D:20200902082952"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -330,6 +330,102 @@ h
 <layer name="non-positive"/>
 <layer name="mod-colour"/>
 <view layers="alpha diagonals positive-slope bags L23 L12 non-positive mod-colour" active="mod-colour"/>
+<path layer="L12" matrix="1 0 0 -1 -48 1484" stroke="brew1" pen="ultrafat">
+252 764 m
+80 0 0 -80 332 764 411.9 760.005 a
+</path>
+<path matrix="1 0 0 -1 -48 1484" stroke="brew1" pen="ultrafat">
+276 764 m
+56 0 0 -56 332 764 388 764 a
+</path>
+<path matrix="1 0 0 -1 -48 1484" stroke="brew1" pen="ultrafat">
+300 764 m
+32 0 0 -32 332 764 364 764 a
+</path>
+<path matrix="1 0 0 1 -48 -44" stroke="brew1" pen="ultrafat">
+300 764 m
+44 0 0 44 344 764 388 764 a
+</path>
+<path matrix="1 0 0 1 -48 -44" stroke="brew1" pen="ultrafat">
+276 764 m
+68 0 0 68 344 764 412 764 a
+</path>
+<path matrix="1 0 0 1 -48 -44" stroke="brew1" pen="ultrafat">
+252 764 m
+92 0 0 92 344 764 436 764 a
+</path>
+<path layer="L23" matrix="1 0 0 1 132 -44" stroke="brew1" pen="ultrafat">
+184 764 m
+92 0 0 92 276 764 368 764 a
+</path>
+<path matrix="1 0 0 1 132 -44" stroke="brew1" pen="ultrafat">
+232 764 m
+44 0 0 44 276 764 320 764 a
+</path>
+<path matrix="1 0 0 1 132 -44" stroke="brew1" pen="ultrafat">
+208 764 m
+68 0 0 68 276 764 344 764 a
+</path>
+<path layer="L12" matrix="1 0 0 -1 64 1484" stroke="brew1" pen="ultrafat">
+252 764 m
+80 0 0 -80 332 764 411.9 760.005 a
+</path>
+<path matrix="1 0 0 -1 64 1484" stroke="brew1" pen="ultrafat">
+276 764 m
+56 0 0 -56 332 764 388 764 a
+</path>
+<path matrix="1 0 0 -1 64 1484" stroke="brew1" pen="ultrafat">
+300 764 m
+32 0 0 -32 332 764 364 764 a
+</path>
+<path layer="mod-colour" matrix="1 0 0 -1 -48 1483.99" stroke="black" pen="heavier">
+252 764 m
+80 0 0 -80 332 764 411.9 760.005 a
+</path>
+<path matrix="1 0 0 -1 -48 1483.99" stroke="black" pen="heavier">
+276 764 m
+56 0 0 -56 332 764 388 764 a
+</path>
+<path matrix="1 0 0 -1 -48 1483.99" stroke="black" pen="heavier">
+300 764 m
+32 0 0 -32 332 764 364 764 a
+</path>
+<path matrix="1 0 0 1 -48 -44.005" stroke="black" pen="heavier">
+300 764 m
+44 0 0 44 344 764 388 764 a
+</path>
+<path matrix="1 0 0 1 -48 -44.005" stroke="black" pen="heavier">
+276 764 m
+68 0 0 68 344 764 412 764 a
+</path>
+<path matrix="1 0 0 1 -48 -44.005" stroke="black" pen="heavier">
+252 764 m
+92 0 0 92 344 764 436 764 a
+</path>
+<path matrix="1 0 0 1 132 -44" stroke="white" pen="heavier">
+184 764 m
+92 0 0 92 276 764 368 764 a
+</path>
+<path matrix="1 0 0 1 132 -44" stroke="white" pen="heavier">
+232 764 m
+44 0 0 44 276 764 320 764 a
+</path>
+<path matrix="1 0 0 1 132 -44" stroke="white" pen="heavier">
+208 764 m
+68 0 0 68 276 764 344 764 a
+</path>
+<path matrix="1 0 0 -1 64 1484" stroke="white" pen="heavier">
+252 764 m
+80 0 0 -80 332 764 411.9 760.005 a
+</path>
+<path matrix="1 0 0 -1 64 1484" stroke="white" pen="heavier">
+276 764 m
+56 0 0 -56 332 764 388 764 a
+</path>
+<path matrix="1 0 0 -1 64 1484" stroke="white" pen="heavier">
+300 764 m
+32 0 0 -32 332 764 364 764 a
+</path>
 <path layer="L12" matrix="1 0 0 1 -24 -44.005" stroke="brew4" pen="ultrafat">
 252 764 m
 80 0 0 -80 332 764 411.9 760.005 a
@@ -339,6 +435,42 @@ h
 56 0 0 -56 332 764 388 764 a
 </path>
 <path matrix="1 0 0 1 -24 -44.005" stroke="brew4" pen="ultrafat">
+300 764 m
+32 0 0 -32 332 764 364 764 a
+</path>
+<path layer="L23" matrix="1 0 0 1 88 -43.995" stroke="brew4" pen="ultrafat">
+252 764 m
+80 0 0 -80 332 764 411.9 760.005 a
+</path>
+<path matrix="1 0 0 1 88 -43.995" stroke="brew4" pen="ultrafat">
+276 764 m
+56 0 0 -56 332 764 388 764 a
+</path>
+<path matrix="1 0 0 1 88 -43.995" stroke="brew4" pen="ultrafat">
+300 764 m
+32 0 0 -32 332 764 364 764 a
+</path>
+<path layer="mod-colour" matrix="1 0 0 1 -24 -44.01" stroke="black" pen="heavier">
+252 764 m
+80 0 0 -80 332 764 411.9 760.005 a
+</path>
+<path matrix="1 0 0 1 -24 -44.01" stroke="black" pen="heavier">
+276 764 m
+56 0 0 -56 332 764 388 764 a
+</path>
+<path matrix="1 0 0 1 -24 -44.01" stroke="black" pen="heavier">
+300 764 m
+32 0 0 -32 332 764 364 764 a
+</path>
+<path matrix="1 0 0 1 88 -43.995" stroke="white" pen="heavier">
+252 764 m
+80 0 0 -80 332 764 411.9 760.005 a
+</path>
+<path matrix="1 0 0 1 88 -43.995" stroke="white" pen="heavier">
+276 764 m
+56 0 0 -56 332 764 388 764 a
+</path>
+<path matrix="1 0 0 1 88 -43.995" stroke="white" pen="heavier">
 300 764 m
 32 0 0 -32 332 764 364 764 a
 </path>
@@ -378,73 +510,13 @@ h
 232 688 m
 240 688 l
 </path>
-<path layer="L23" matrix="1 0 0 1 88 -43.995" stroke="brew4" pen="ultrafat">
-252 764 m
-80 0 0 -80 332 764 411.9 760.005 a
-</path>
-<path matrix="1 0 0 1 88 -43.995" stroke="brew4" pen="ultrafat">
-276 764 m
-56 0 0 -56 332 764 388 764 a
-</path>
-<path matrix="1 0 0 1 88 -43.995" stroke="brew4" pen="ultrafat">
-300 764 m
-32 0 0 -32 332 764 364 764 a
-</path>
-<path layer="L12" matrix="1 0 0 -1 -48 1484" stroke="brew1" pen="ultrafat">
-252 764 m
-80 0 0 -80 332 764 411.9 760.005 a
-</path>
-<path matrix="1 0 0 -1 -48 1484" stroke="brew1" pen="ultrafat">
-276 764 m
-56 0 0 -56 332 764 388 764 a
-</path>
-<path matrix="1 0 0 -1 -48 1484" stroke="brew1" pen="ultrafat">
-300 764 m
-32 0 0 -32 332 764 364 764 a
-</path>
-<path matrix="1 0 0 1 -48 -44" stroke="brew1" pen="ultrafat">
+<path layer="L12" matrix="1 0 0 1 -48 -44" stroke="brew1" pen="ultrafat">
 324 764 m
 20 0 0 20 344 764 364 764 a
 </path>
-<path matrix="1 0 0 1 -48 -44" stroke="brew1" pen="ultrafat">
-300 764 m
-44 0 0 44 344 764 388 764 a
-</path>
-<path matrix="1 0 0 1 -48 -44" stroke="brew1" pen="ultrafat">
-276 764 m
-68 0 0 68 344 764 412 764 a
-</path>
-<path matrix="1 0 0 1 -48 -44" stroke="brew1" pen="ultrafat">
-252 764 m
-92 0 0 92 344 764 436 764 a
-</path>
 <path layer="L23" matrix="1 0 0 1 132 -44" stroke="brew1" pen="ultrafat">
-184 764 m
-92 0 0 92 276 764 368 764 a
-</path>
-<path matrix="1 0 0 1 132 -44" stroke="brew1" pen="ultrafat">
 256 764 m
 20 0 0 20 276 764 296 764 a
-</path>
-<path matrix="1 0 0 1 132 -44" stroke="brew1" pen="ultrafat">
-232 764 m
-44 0 0 44 276 764 320 764 a
-</path>
-<path matrix="1 0 0 1 132 -44" stroke="brew1" pen="ultrafat">
-208 764 m
-68 0 0 68 276 764 344 764 a
-</path>
-<path layer="L12" matrix="1 0 0 -1 64 1484" stroke="brew1" pen="ultrafat">
-252 764 m
-80 0 0 -80 332 764 411.9 760.005 a
-</path>
-<path matrix="1 0 0 -1 64 1484" stroke="brew1" pen="ultrafat">
-276 764 m
-56 0 0 -56 332 764 388 764 a
-</path>
-<path matrix="1 0 0 -1 64 1484" stroke="brew1" pen="ultrafat">
-300 764 m
-32 0 0 -32 332 764 364 764 a
 </path>
 <path layer="positive-slope" matrix="1 0 0 1 24 60" stroke="brew1" pen="ultrafat">
 56 684 m
@@ -658,277 +730,205 @@ h
 <text matrix="1 0 0 1 228 -16" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_3</text>
 <text matrix="1 0 0 1 252 -16" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_3</text>
 <text matrix="1 0 0 1 276 -16" transformations="translations" pos="224 736" stroke="black" type="label" width="9.655" height="6.923" depth="1.49" halign="center" valign="center" style="math">d_3</text>
-<path layer="bags" matrix="1 0 0 1 4 -164" stroke="black" fill="brew1">
+<path layer="bags" matrix="0.8 0 0 0.8 62 -15.5698" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 4 -184" stroke="black" fill="brew1">
+<path matrix="0.8 0 0 0.8 62 -31.5698" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 24 -144" stroke="black" fill="brew2">
+<path matrix="0.8 0 0 0.8 78 0.4302" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 24 -164" stroke="black" fill="brew2">
+<path matrix="0.8 0 0 0.8 78 -15.5698" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 24 -184" stroke="black" fill="brew2">
+<path matrix="0.8 0 0 0.8 78 -31.5698" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 24 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_1</text>
-<text matrix="1 0 0 1 4 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_2</text>
-<text matrix="1 0 0 1 24 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_2</text>
-<text matrix="1 0 0 1 4 -184" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_3</text>
-<text matrix="1 0 0 1 24 -184" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_3</text>
-<path matrix="1 0 0 1 -48 -144" stroke="black" fill="brew1">
+<text matrix="0.8 0 0 0.8 78 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_1</text>
+<text matrix="0.8 0 0 0.8 62 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_2</text>
+<text matrix="0.8 0 0 0.8 78 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_2</text>
+<text matrix="0.8 0 0 0.8 62 -31.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_3</text>
+<text matrix="0.8 0 0 0.8 78 -31.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_3</text>
+<path matrix="0.8 0 0 0.8 20.4 0.4302" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 -48 -164" stroke="black" fill="brew1">
+<path matrix="0.8 0 0 0.8 20.4 -15.5698" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 -48 -184" stroke="black" fill="brew1">
+<path matrix="0.8 0 0 0.8 20.4 -31.5698" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 -28 -144" stroke="black" fill="brew2">
+<path matrix="0.8 0 0 0.8 36.4 0.4302" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 -28 -164" stroke="black" fill="brew2">
+<path matrix="0.8 0 0 0.8 36.4 -15.5698" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 -48 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_1</text>
-<text matrix="1 0 0 1 -28 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_1</text>
-<text matrix="1 0 0 1 -48 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_2</text>
-<text matrix="1 0 0 1 -28 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_2</text>
-<text matrix="1 0 0 1 -48 -184" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_3</text>
-<path matrix="1 0 0 1 -100 -144" stroke="black" fill="brew1">
+<text matrix="0.8 0 0 0.8 20.4 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_1</text>
+<text matrix="0.8 0 0 0.8 36.4 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_1</text>
+<text matrix="0.8 0 0 0.8 20.4 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_2</text>
+<text matrix="0.8 0 0 0.8 36.4 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_2</text>
+<text matrix="0.8 0 0 0.8 20.4 -31.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_3</text>
+<path matrix="0.8 0 0 0.8 -21.2 0.4302" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 -100 -164" stroke="black" fill="brew1">
+<path matrix="0.8 0 0 0.8 -21.2 -15.5698" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 -100 -184" stroke="black" fill="brew1">
+<path matrix="0.8 0 0 0.8 -21.2 -31.5698" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 -80 -144" stroke="black" fill="brew2">
+<path matrix="0.8 0 0 0.8 -5.2 0.4302" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 -100 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_1</text>
-<text matrix="1 0 0 1 -80 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_1</text>
-<text matrix="1 0 0 1 -100 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_2</text>
-<text matrix="1 0 0 1 -100 -184" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_3</text>
-<path matrix="1 0 0 1 -132 -144" stroke="black" fill="brew1">
+<text matrix="0.8 0 0 0.8 -21.2 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_1</text>
+<text matrix="0.8 0 0 0.8 -5.2 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_1</text>
+<text matrix="0.8 0 0 0.8 -21.2 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_2</text>
+<text matrix="0.8 0 0 0.8 -21.2 -31.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_3</text>
+<path matrix="0.8 0 0 0.8 -46.8 0.4302" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 -132 -164" stroke="black" fill="brew1">
+<path matrix="0.8 0 0 0.8 -46.8 -15.5698" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 -132 -184" stroke="black" fill="brew1">
+<path matrix="0.8 0 0 0.8 -46.8 -31.5698" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 -132 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_1</text>
-<text matrix="1 0 0 1 -132 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_2</text>
-<text matrix="1 0 0 1 -132 -184" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_3</text>
-<path matrix="1 0 0 1 -164 -144" stroke="black" fill="brew1">
+<text matrix="0.8 0 0 0.8 -46.8 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_1</text>
+<text matrix="0.8 0 0 0.8 -46.8 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_2</text>
+<text matrix="0.8 0 0 0.8 -46.8 -31.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_3</text>
+<path matrix="0.8 0 0 0.8 -72.4 0.4302" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 -164 -164" stroke="black" fill="brew1">
+<path matrix="0.8 0 0 0.8 -72.4 -15.5698" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 -164 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_1</text>
-<text matrix="1 0 0 1 -164 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_2</text>
-<path matrix="1 0 0 1 -196 -144" stroke="black" fill="brew1">
+<text matrix="0.8 0 0 0.8 -72.4 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_1</text>
+<text matrix="0.8 0 0 0.8 -72.4 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_2</text>
+<path matrix="0.8 0 0 0.8 -98 0.4302" stroke="black" fill="brew1">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 -196 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_1</text>
-<path matrix="1 0 0 1 56 -144" stroke="black" fill="brew2">
+<text matrix="0.8 0 0 0.8 -98 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="9.736" height="4.294" depth="1.49" halign="center" valign="center" style="math">a_1</text>
+<path matrix="0.8 0 0 0.8 103.6 0.4302" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 56 -164" stroke="black" fill="brew2">
+<path matrix="0.8 0 0 0.8 103.6 -15.5698" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 56 -184" stroke="black" fill="brew2">
+<path matrix="0.8 0 0 0.8 103.6 -31.5698" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 56 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_1</text>
-<text matrix="1 0 0 1 56 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_2</text>
-<text matrix="1 0 0 1 56 -184" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_3</text>
-<path matrix="1 0 0 1 76 -144" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 103.6 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_1</text>
+<text matrix="0.8 0 0 0.8 103.6 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_2</text>
+<text matrix="0.8 0 0 0.8 103.6 -31.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_3</text>
+<path matrix="0.8 0 0 0.8 119.6 0.4302" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 76 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_1</text>
-<path matrix="1 0 0 1 108 -144" stroke="black" fill="brew2">
+<text matrix="0.8 0 0 0.8 119.6 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_1</text>
+<path matrix="0.8 0 0 0.8 145.2 0.4302" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 108 -164" stroke="black" fill="brew2">
+<path matrix="0.8 0 0 0.8 145.2 -15.5698" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 108 -184" stroke="black" fill="brew2">
+<path matrix="0.8 0 0 0.8 145.2 -31.5698" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 108 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_1</text>
-<text matrix="1 0 0 1 108 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_2</text>
-<text matrix="1 0 0 1 108 -184" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_3</text>
-<path matrix="1 0 0 1 128 -144" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 145.2 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_1</text>
+<text matrix="0.8 0 0 0.8 145.2 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_2</text>
+<text matrix="0.8 0 0 0.8 145.2 -31.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_3</text>
+<path matrix="0.8 0 0 0.8 161.2 0.4302" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 128 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_1</text>
-<path matrix="1 0 0 1 128 -164" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 161.2 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_1</text>
+<path matrix="0.8 0 0 0.8 161.2 -15.5698" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 128 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_2</text>
-<path matrix="1 0 0 1 160 -164" stroke="black" fill="brew2">
+<text matrix="0.8 0 0 0.8 161.2 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_2</text>
+<path matrix="0.8 0 0 0.8 186.8 -15.5698" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<path matrix="1 0 0 1 160 -184" stroke="black" fill="brew2">
+<path matrix="0.8 0 0 0.8 186.8 -31.5698" stroke="black" fill="brew2">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 160 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_2</text>
-<text matrix="1 0 0 1 160 -184" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_3</text>
-<path matrix="1 0 0 1 180 -144" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 186.8 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_2</text>
+<text matrix="0.8 0 0 0.8 186.8 -31.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.745" height="6.923" depth="1.49" halign="center" valign="center" style="math">b_3</text>
+<path matrix="0.8 0 0 0.8 202.8 0.4302" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 180 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_1</text>
-<path matrix="1 0 0 1 180 -164" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 202.8 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_1</text>
+<path matrix="0.8 0 0 0.8 202.8 -15.5698" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 180 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_2</text>
-<path matrix="1 0 0 1 180 -184" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 202.8 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_2</text>
+<path matrix="0.8 0 0 0.8 202.8 -31.5698" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 180 -184" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_3</text>
-<path matrix="1 0 0 1 212 -144" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 202.8 -31.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_3</text>
+<path matrix="0.8 0 0 0.8 228.4 0.4302" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 212 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_1</text>
-<path matrix="1 0 0 1 212 -164" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 228.4 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_1</text>
+<path matrix="0.8 0 0 0.8 228.4 -15.5698" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 212 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_2</text>
-<path matrix="1 0 0 1 212 -184" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 228.4 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_2</text>
+<path matrix="0.8 0 0 0.8 228.4 -31.5698" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 212 -184" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_3</text>
-<path matrix="1 0 0 1 232 -144" stroke="black" fill="brew4">
+<text matrix="0.8 0 0 0.8 228.4 -31.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_3</text>
+<path matrix="0.8 0 0 0.8 244.4 0.4302" stroke="black" fill="brew4">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 232 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="9.655" height="6.923" depth="1.49" halign="center" valign="center" style="math">d_1</text>
-<path matrix="1 0 0 1 264 -144" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 244.4 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="9.655" height="6.923" depth="1.49" halign="center" valign="center" style="math">d_1</text>
+<path matrix="0.8 0 0 0.8 270 0.4302" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 264 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_1</text>
-<path matrix="1 0 0 1 264 -164" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 270 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_1</text>
+<path matrix="0.8 0 0 0.8 270 -15.5698" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 264 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_2</text>
-<path matrix="1 0 0 1 264 -184" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 270 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_2</text>
+<path matrix="0.8 0 0 0.8 270 -31.5698" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 264 -184" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_3</text>
-<path matrix="1 0 0 1 284 -144" stroke="black" fill="brew4">
+<text matrix="0.8 0 0 0.8 270 -31.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_3</text>
+<path matrix="0.8 0 0 0.8 286 0.4302" stroke="black" fill="brew4">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 284 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="9.655" height="6.923" depth="1.49" halign="center" valign="center" style="math">d_1</text>
-<path matrix="1 0 0 1 284 -164" stroke="black" fill="brew4">
+<text matrix="0.8 0 0 0.8 286 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="9.655" height="6.923" depth="1.49" halign="center" valign="center" style="math">d_1</text>
+<path matrix="0.8 0 0 0.8 286 -15.5698" stroke="black" fill="brew4">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 284 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="9.655" height="6.923" depth="1.49" halign="center" valign="center" style="math">d_2</text>
-<path matrix="1 0 0 1 316 -164" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 286 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="9.655" height="6.923" depth="1.49" halign="center" valign="center" style="math">d_2</text>
+<path matrix="0.8 0 0 0.8 311.6 -15.5698" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 316 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_2</text>
-<path matrix="1 0 0 1 316 -184" stroke="black" fill="brew3">
+<text matrix="0.8 0 0 0.8 311.6 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_2</text>
+<path matrix="0.8 0 0 0.8 311.6 -31.5698" stroke="black" fill="brew3">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 316 -184" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_3</text>
-<path matrix="1 0 0 1 336 -144" stroke="black" fill="brew4">
+<text matrix="0.8 0 0 0.8 311.6 -31.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="8.781" height="4.294" depth="1.49" halign="center" valign="center" style="math">c_3</text>
+<path matrix="0.8 0 0 0.8 327.6 0.4302" stroke="black" fill="brew4">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 336 -144" transformations="translations" pos="224 736" stroke="black" type="label" width="9.655" height="6.923" depth="1.49" halign="center" valign="center" style="math">d_1</text>
-<path matrix="1 0 0 1 336 -164" stroke="black" fill="brew4">
+<text matrix="0.8 0 0 0.8 327.6 0.4302" transformations="translations" pos="224 736" stroke="black" type="label" width="9.655" height="6.923" depth="1.49" halign="center" valign="center" style="math">d_1</text>
+<path matrix="0.8 0 0 0.8 327.6 -15.5698" stroke="black" fill="brew4">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 336 -164" transformations="translations" pos="224 736" stroke="black" type="label" width="9.655" height="6.923" depth="1.49" halign="center" valign="center" style="math">d_2</text>
-<path matrix="1 0 0 1 336 -184" stroke="black" fill="brew4">
+<text matrix="0.8 0 0 0.8 327.6 -15.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="9.655" height="6.923" depth="1.49" halign="center" valign="center" style="math">d_2</text>
+<path matrix="0.8 0 0 0.8 327.6 -31.5698" stroke="black" fill="brew4">
 8 0 0 8 224 736 e
 </path>
-<text matrix="1 0 0 1 336 -184" transformations="translations" pos="224 736" stroke="black" type="label" width="9.655" height="6.923" depth="1.49" halign="center" valign="center" style="math">d_3</text>
-<path layer="mod-colour" matrix="1 0 0 1 -24 -44.01" stroke="black" pen="heavier">
-252 764 m
-80 0 0 -80 332 764 411.9 760.005 a
-</path>
-<path matrix="1 0 0 1 -24 -44.01" stroke="black" pen="heavier">
-276 764 m
-56 0 0 -56 332 764 388 764 a
-</path>
-<path matrix="1 0 0 1 -24 -44.01" stroke="black" pen="heavier">
-300 764 m
-32 0 0 -32 332 764 364 764 a
-</path>
-<path matrix="1 0 0 -1 -48 1483.99" stroke="black" pen="heavier">
-252 764 m
-80 0 0 -80 332 764 411.9 760.005 a
-</path>
-<path matrix="1 0 0 -1 -48 1483.99" stroke="black" pen="heavier">
-276 764 m
-56 0 0 -56 332 764 388 764 a
-</path>
-<path matrix="1 0 0 -1 -48 1483.99" stroke="black" pen="heavier">
-300 764 m
-32 0 0 -32 332 764 364 764 a
-</path>
-<path matrix="1 0 0 1 -48 -44.005" stroke="black" pen="heavier">
+<text matrix="0.8 0 0 0.8 327.6 -31.5698" transformations="translations" pos="224 736" stroke="black" type="label" width="9.655" height="6.923" depth="1.49" halign="center" valign="center" style="math">d_3</text>
+<path layer="mod-colour" matrix="1 0 0 1 -48 -44.005" stroke="black" pen="heavier">
 324 764 m
 20 0 0 20 344 764 364 764 a
-</path>
-<path matrix="1 0 0 1 -48 -44.005" stroke="black" pen="heavier">
-300 764 m
-44 0 0 44 344 764 388 764 a
-</path>
-<path matrix="1 0 0 1 -48 -44.005" stroke="black" pen="heavier">
-276 764 m
-68 0 0 68 344 764 412 764 a
-</path>
-<path matrix="1 0 0 1 -48 -44.005" stroke="black" pen="heavier">
-252 764 m
-92 0 0 92 344 764 436 764 a
-</path>
-<path matrix="1 0 0 1 88 -43.995" stroke="white" pen="heavier">
-252 764 m
-80 0 0 -80 332 764 411.9 760.005 a
-</path>
-<path matrix="1 0 0 1 88 -43.995" stroke="white" pen="heavier">
-276 764 m
-56 0 0 -56 332 764 388 764 a
-</path>
-<path matrix="1 0 0 1 88 -43.995" stroke="white" pen="heavier">
-300 764 m
-32 0 0 -32 332 764 364 764 a
-</path>
-<path matrix="1 0 0 1 132 -44" stroke="white" pen="heavier">
-184 764 m
-92 0 0 92 276 764 368 764 a
 </path>
 <path matrix="1 0 0 1 132 -44" stroke="white" pen="heavier">
 256 764 m
 20 0 0 20 276 764 296 764 a
-</path>
-<path matrix="1 0 0 1 132 -44" stroke="white" pen="heavier">
-232 764 m
-44 0 0 44 276 764 320 764 a
-</path>
-<path matrix="1 0 0 1 132 -44" stroke="white" pen="heavier">
-208 764 m
-68 0 0 68 276 764 344 764 a
-</path>
-<path matrix="1 0 0 -1 64 1484" stroke="white" pen="heavier">
-252 764 m
-80 0 0 -80 332 764 411.9 760.005 a
-</path>
-<path matrix="1 0 0 -1 64 1484" stroke="white" pen="heavier">
-276 764 m
-56 0 0 -56 332 764 388 764 a
-</path>
-<path matrix="1 0 0 -1 64 1484" stroke="white" pen="heavier">
-300 764 m
-32 0 0 -32 332 764 364 764 a
 </path>
 <text layer="alpha" matrix="1 0 0 1 -48.772 7.33" transformations="translations" pos="224 736" stroke="black" type="label" width="11.25" height="6.812" depth="1.49" halign="center" valign="center" style="math">L_0</text>
 <text matrix="1 0 0 1 -48.772 -16.67" transformations="translations" pos="224 736" stroke="black" type="label" width="11.25" height="6.812" depth="1.49" halign="center" valign="center" style="math">L_1</text>
@@ -937,7 +937,7 @@ h
 88 752 m
 168 796 l
 </path>
-<path matrix="1 0 0 1 0 -20" stroke="black">
+<path matrix="0.8 0 0 0.8 58.8 99.6302" stroke="black">
 40 604 m
 40 620 l
 4 0 0 4 36 620 36 624 a
@@ -948,7 +948,7 @@ h
 36 600 l
 4 0 0 4 36 604 40 604 a
 </path>
-<path matrix="1 0 0 1 0 -20" stroke="black">
+<path matrix="0.8 0 0 0.8 58.8 99.6302" stroke="black">
 72 600 m
 72 620 l
 4 0 0 4 68 620 68 624 a
@@ -960,7 +960,7 @@ h
 4 0 0 4 68 584 72 584 a
 72 600 l
 </path>
-<path matrix="1 0 0 1 0 -20" stroke="black">
+<path matrix="0.8 0 0 0.8 58.8 99.6302" stroke="black">
 104 592 m
 104 620 l
 4 0 0 4 100 620 100 624 a
@@ -972,7 +972,7 @@ h
 4 0 0 4 100 564 104 564 a
 104 592 l
 </path>
-<path matrix="1 0 0 1 0 -20" stroke="black">
+<path matrix="0.8 0 0 0.8 58.8 99.6302" stroke="black">
 124 624 m
 116 624 l
 4 0 0 4 116 620 112 620 a
@@ -984,7 +984,7 @@ h
 4 0 0 4 152 620 152 624 a
 124 624 l
 </path>
-<path matrix="1 0 0 1 52 -20" stroke="black">
+<path matrix="0.8 0 0 0.8 100.4 99.6302" stroke="black">
 124 624 m
 116 624 l
 4 0 0 4 116 620 112 620 a
@@ -996,7 +996,7 @@ h
 4 0 0 4 152 620 152 624 a
 124 624 l
 </path>
-<path matrix="1 0 0 1 104 -20" stroke="black">
+<path matrix="0.8 0 0 0.8 142 99.6302" stroke="black">
 124 624 m
 116 624 l
 4 0 0 4 116 620 112 620 a
@@ -1008,7 +1008,7 @@ h
 4 0 0 4 152 620 152 624 a
 124 624 l
 </path>
-<path matrix="1 0 0 1 156 -20" stroke="black">
+<path matrix="0.8 0 0 0.8 183.6 99.6302" stroke="black">
 124 624 m
 116 624 l
 4 0 0 4 116 620 112 620 a
@@ -1020,7 +1020,7 @@ h
 4 0 0 4 152 620 152 624 a
 124 624 l
 </path>
-<path matrix="1 0 0 1 208 -20" stroke="black">
+<path matrix="0.8 0 0 0.8 225.2 99.6302" stroke="black">
 124 624 m
 116 624 l
 4 0 0 4 116 620 112 620 a
@@ -1032,7 +1032,7 @@ h
 4 0 0 4 152 620 152 624 a
 124 624 l
 </path>
-<path matrix="1 0 0 1 260 -20" stroke="black">
+<path matrix="0.8 0 0 0.8 266.8 99.6302" stroke="black">
 124 624 m
 116 624 l
 4 0 0 4 116 620 112 620 a
@@ -1044,7 +1044,7 @@ h
 4 0 0 4 152 620 152 624 a
 124 624 l
 </path>
-<path matrix="1 0 0 1 312 -20" stroke="black">
+<path matrix="0.8 0 0 0.8 308.4 99.6302" stroke="black">
 124 624 m
 116 624 l
 4 0 0 4 116 620 112 620 a
@@ -1056,7 +1056,7 @@ h
 4 0 0 4 152 620 152 624 a
 124 624 l
 </path>
-<path matrix="1 0 0 1 364 -20" stroke="black">
+<path matrix="0.8 0 0 0.8 350 99.6302" stroke="black">
 124 624 m
 116 624 l
 4 0 0 4 116 620 112 620 a
@@ -1068,7 +1068,7 @@ h
 4 0 0 4 152 620 152 624 a
 124 624 l
 </path>
-<path matrix="1 0 0 1 416 -20" stroke="black">
+<path matrix="0.8 0 0 0.8 391.6 99.6302" stroke="black">
 124 624 m
 116 624 l
 4 0 0 4 116 620 112 620 a
@@ -1080,18 +1080,18 @@ h
 4 0 0 4 152 620 152 624 a
 124 624 l
 </path>
-<text matrix="1 0 0 1 -196 -128" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_1</text>
-<text matrix="1 0 0 1 -164 -128" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_2</text>
-<text matrix="1 0 0 1 -132 -128" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_3</text>
-<text matrix="1 0 0 1 -88 -128" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_4</text>
-<text matrix="1 0 0 1 -36 -128" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_5</text>
-<text matrix="1 0 0 1 16 -128" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_6</text>
-<text matrix="1 0 0 1 68 -128" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_7</text>
-<text matrix="1 0 0 1 120 -128" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_8</text>
-<text matrix="1 0 0 1 172 -128" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_9</text>
-<text matrix="1 0 0 1 220 -128" transformations="translations" pos="224 736" stroke="black" type="label" width="15.997" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_{10}</text>
-<text matrix="1 0 0 1 272 -128" transformations="translations" pos="224 736" stroke="black" type="label" width="15.997" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_{11}</text>
-<text matrix="1 0 0 1 324 -128" transformations="translations" pos="224 736" stroke="black" type="label" width="15.997" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_{12}</text>
+<text matrix="0.8 0 0 0.8 -98 13.2302" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_1</text>
+<text matrix="0.8 0 0 0.8 -72.4 13.2302" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_2</text>
+<text matrix="0.8 0 0 0.8 -46.8 13.2302" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_3</text>
+<text matrix="0.8 0 0 0.8 -11.6 13.2302" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_4</text>
+<text matrix="0.8 0 0 0.8 30 13.2302" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_5</text>
+<text matrix="0.8 0 0 0.8 71.6 13.2302" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_6</text>
+<text matrix="0.8 0 0 0.8 113.2 13.2302" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_7</text>
+<text matrix="0.8 0 0 0.8 154.8 13.2302" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_8</text>
+<text matrix="0.8 0 0 0.8 196.4 13.2302" transformations="translations" pos="224 736" stroke="black" type="label" width="12.026" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_9</text>
+<text matrix="0.8 0 0 0.8 234.8 13.2302" transformations="translations" pos="224 736" stroke="black" type="label" width="15.997" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_{10}</text>
+<text matrix="0.8 0 0 0.8 276.4 13.2302" transformations="translations" pos="224 736" stroke="black" type="label" width="15.997" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_{11}</text>
+<text matrix="0.8 0 0 0.8 318 13.2302" transformations="translations" pos="224 736" stroke="black" type="label" width="15.997" height="6.812" depth="1.49" halign="center" valign="bottom" style="math">B_{12}</text>
 <path layer="mod-colour" matrix="1 0 0 1 204 32" stroke="black" pen="fat">
 232 688 m
 240 688 l
