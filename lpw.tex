@@ -1,5 +1,4 @@
-
-\documentclass{patmorin}
+\documentclass{jgaa-art}
 \setlength{\parskip}{1ex}
 \listfiles
 \usepackage[utf8]{inputenc}
@@ -7,25 +6,71 @@
 
 % \let\proof\relax \let\endproof\relax
 
-\usepackage{amsthm,amsmath,amssymb}
+\usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{subcaption}
-\usepackage{pat}
-\usepackage[letterpaper]{hyperref}
-\usepackage[table,dvipsnames]{xcolor}
+% \usepackage{pat}
+
+
+% <pat.sty>
+\newcommand{\etal}{et al.}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newcommand{\seclabel}[1]{\label{sec:#1}}
+\newcommand{\Secref}[1]{Section~\ref{sec:#1}}
+\newcommand{\secref}[1]{\mbox{Section~\ref{sec:#1}}}
+
+\newcommand{\alglabel}[1]{\label{alg:#1}}
+\newcommand{\Algref}[1]{Algorithm~\ref{alg:#1}}
+\newcommand{\algref}[1]{\mbox{Algorithm~\ref{alg:#1}}}
+
+\newcommand{\applabel}[1]{\label{app:#1}}
+\newcommand{\Appref}[1]{Appendix~\ref{app:#1}}
+\newcommand{\appref}[1]{\mbox{Appendix~\ref{app:#1}}}
+
+\newcommand{\tablabel}[1]{\label{tab:#1}}
+\newcommand{\Tabref}[1]{Table~\ref{tab:#1}}
+\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+
+\newcommand{\figlabel}[1]{\label{fig:#1}}
+\newcommand{\Figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\figref}[1]{\mbox{Figure~\ref{fig:#1}}}
+
+\newcommand{\eqlabel}[1]{\label{eq:#1}}
+\renewcommand{\eqref}[1]{(\ref{eq:#1})}
+\newcommand{\myeqref}[1]{(\ref{eq:#1})}
+\newcommand{\Eqref}[1]{Equation~(\ref{eq:#1})}
+
+\newtheorem{thm}{Theorem}{\bfseries}{\itshape}
+\newcommand{\thmlabel}[1]{\label{thm:#1}}
+\newcommand{\thmref}[1]{Theorem~\ref{thm:#1}}
+
+\newtheorem{lem}{Lemma}{\bfseries}{\itshape}
+\newcommand{\lemlabel}[1]{\label{lem:#1}}
+\newcommand{\lemref}[1]{Lemma~\ref{lem:#1}}
+
+\newtheorem{obs}{Observation}{\bfseries}{\itshape}
+\newcommand{\obslabel}[1]{\label{obs:#1}}
+\newcommand{\obsref}[1]{Observation~\ref{obs:#1}}
+% </pat.sty>
+
+
+
+
+% \usepackage[letterpaper]{hyperref}
+% \usepackage[table,dvipsnames]{xcolor}
 \usepackage{thm-restate}
-\usepackage{float}
+% \usepackage{float}
 
 \usepackage{paralist}
 
 %\usepackage[compact]{titlesec}
 
-\definecolor{linkblue}{named}{Blue}
-\hypersetup{colorlinks=true, linkcolor=linkblue,  anchorcolor=linkblue,
-citecolor=linkblue, filecolor=linkblue, menucolor=linkblue,
-urlcolor=linkblue}
+% \definecolor{linkblue}{named}{Blue}
+% \hypersetup{colorlinks=true, linkcolor=linkblue,  anchorcolor=linkblue, citecolor=linkblue, filecolor=linkblue, menucolor=linkblue, urlcolor=linkblue}
 %\setlength{\parskip}{1ex}
-\usepackage{wasysym}
+% \usepackage{wasysym}
 
 % \usepackage[mathlines]{lineno}
 % \linenumbers
@@ -64,49 +109,63 @@ urlcolor=linkblue}
 % \setlength{\belowcaptionskip}{0mm} %8pt plus 1.0pt minus 2.0pt}
 
 
-\title{\MakeUppercase{Two Results on Layered Pathwidth and Linear Layouts}%
-  \thanks{This research was partly funded by NSERC and the Ontario Ministry of Economic Development, Job Creation and Trade (formerly the Ministry of Research and Innovation)}}
-
-\author{Vida Dujmović%
-  \thanks{Deparment of Computer Science and Electrical Engineering, University of Ottawa}\qquad
-  Pat Morin%
-  \thanks{School of Computer Science, Carleton University}\qquad
-  Céline Yelle\footnotemark[2]}
+% \title{\MakeUppercase{Two Results on Layered Pathwidth and Linear Layouts}%
+%   \thanks{This research was partly funded by NSERC and the Ontario Ministry of Economic Development, Job Creation and Trade (formerly the Ministry of Research and Innovation)}}
+%
+% \author{Vida Dujmović%
+%   \thanks{Deparment of Computer Science and Electrical Engineering, University of Ottawa}\qquad
+%   Pat Morin%
+%   \thanks{School of Computer Science, Carleton University}\qquad
+%   Céline Yelle\footnotemark[2]}
 
 \date{}
 
 \begin{document}
-%
-%
-% \authorrunning{V. Dujmović et al.}
-% First names are abbreviated in the running head.
-% If there are more than two authors, 'et al.' is used.
-%
-% \institute{School of Computer Science and EE, University of
-%   Ottawa, Ottawa, ON, Canada
-%   \email{\{cyell045,vida.dujmovic\}@uottawa.ca} \and School of
-%   Computer Science, Carleton University, Ottawa, ON, Canada
-%   \email{morin@scs.carleton.ca}}
+\doi{}
 
-%
-\maketitle              % typeset the header of the contribution
-%
+doi{}
+% --------------------------------------------------------------------
+\Issue{0}{0}{0}{0}{0} % volume, number, start page, end page, year
+% --------------------------------------------------------------------
+\HeadingAuthor{Dujmović et al.} % short list of authors for header
+\HeadingTitle{Layered Pathwidth and Linear Layouts} % short title for header
+% --------------------------------------------------------------------
+\title{Two Results on Layered Pathwidth and Linear Layouts}
+\Ack{This research was partly funded by NSERC and the Ontario Ministry of Economic Development, Job Creation and Trade (formerly the Ministry of Research and Innovation}
+
+\author[first]{Vida Dujmović}{vdujmovi@uottawa.ca}
+\author[second]{Pat Morin}{morin@scs.carleton.ca}
+\author[first]{Céline Yelle}{cyell045@uottawa.ca}
+% \author[second,third]{Fourth C. O. Author}{fourth@another.univ.edu}
+
+
+\affiliation[first]{Department of Computer Science and Electrical Engineering,\\
+University of Ottawa, Ottawa}
+
+\affiliation[second]{School of Computer Science, Carleton University, Ottawa}
+
+
+%% --------------------------------------------------------------------
+\submitted{January 2008}%
+\reviewed{February 2008}%
+\revised{March 2008}%
+\reviewed{April 2008}%
+\revised{May 2008}%
+\accepted{June 2008}%
+\final{July 2008}%
+\published{August 2008}%
+\type{Regular paper}%
+\editor{A. Editor}%
+%% --------------------------------------------------------------------
+
+\maketitle
 
 
 \begin{abstract}
   Layered pathwidth is a new graph parameter studied by Bannister \etal\ (2015). In this paper we present two new results relating layered pathwidth to two types of linear layouts.  Our first result shows that, for any graph $G$, the stack number of $G$ is at most four times the layered pathwidth of $G$.   Our second result shows that any graph $G$ with track number at most three has layered pathwidth at most four.  The first result complements a result of Dujmović and Frati (2018) relating layered treewidth and stack number.  The second result solves an open problem posed by Bannister \etal\ (2015).
-  % We investigate a relationship between layered pathwidth and track  number and layered pathwidth and stack number. It was known that graphs that have bounded layered pathwidth have bounded queue number and thus bounded track number (Bannister, Devanny, Dujmović,  Eppstein, and Wood [GD 2015, Algorithmica 2018]).  In the other direction, graphs with track number at most 2 are forests of caterpillars and have layered pathwidth at most 2.
-  % However, the existence of 4-track graphs that are expanders (Dujmović, Sidiropoulos and Wood [Chicago J. Theor. Comput. Sci. 2016]) implies that there are 4-track graphs whose layered pathwidth is $\Omega(n/\log n)$.
-  %
-  % These results leave a gap for 3-track graphs. Indeed, Bannister \etal\ conjecture that  3-track graphs have bounded layered
-  % pathwidth.  The main result of the current paper is to confirm this
-  % conjecture by showing that 3-track graphs have layered pathwidth at most 4. In a similar vein, the current paper also completes our knowledge about the
-  % relationship between stack number and layered pathwidth by showing
-  % that the stack number of a graph is at most 4 times its layered pathwidth.
 \end{abstract}
 
-
-%\keywords{track/queue/stack layouts, layered treewidth \& pathwidth.}
+\Body
 
 \section{Introduction}
 \pagenumbering{arabic}
@@ -223,6 +282,7 @@ A summary of known and new results on these rich relationships between layered p
 
 \begin{table}
   \begin{center}
+    \resizebox{\textwidth}{!}{
     \begin{tabular}{|l@{\hspace{1em}}l|}\hline
       \multicolumn{2}{|l|}{Queue-Number versus Track-Number} \\ \hline
       $\qn(G) \le \tn(G)-1$ & \cite[Theorem~2.6]{dmw05} \\
@@ -263,7 +323,7 @@ A summary of known and new results on these rich relationships between layered p
       $\tn(G) \le 3\Rightarrow \lpw(G) \le 4$ & \textbf{\thmref{main}} \\
       $\exists G : \tn(G)=4,\, \lpw(G)=\Omega((n/\log n)$
       & \cite[Theorem~1.5]{dsw16} \\ \hline
-    \end{tabular}
+    \end{tabular}}
   \end{center}
   \caption{Relationships between track number, queue number, stack number, and layered pathwidth.}
   \tablabel{summary}
@@ -541,8 +601,11 @@ The following observation follows from the fact that $G$ is edge-maximal.
 
 \thmref{main} is a consequence of the following lemma.
 
-\begin{restatable}{lem}{main}\lemlabel{main}
-  The edge-maximal 3-track graph $G$ with tracks $x_1,\ldots,x_{n_1}$, $y_1,\ldots,y_{n_2}$, and $z_1,\ldots,x_{n_3}$ described above has a 2-weak layered path
+\begin{lem}\lemlabel{main}
+  The %edge-maximal
+  3-track graph $G$
+  % with tracks $x_1,\ldots,x_{n_1}$, $y_1,\ldots,y_{n_2}$, and $z_1,\ldots,x_{n_3}$
+  described above has a 2-weak layered path
   decomposition, $B_1,\ldots,B_p$, with a layering $\ell$ of (layered) pathwidth $2$ in which
   \begin{enumerate}
     \item for each $i\in\{1,2,3\}$ and each $v\in T_i$,
@@ -552,7 +615,8 @@ The following observation follows from the fact that $G$ is edge-maximal.
     \item $B_p=\{x_{n_1},y_{n_2},z_{n_3}\}$; and
     \item $x_{n_1},y_{n_2},z_{n_3}$ appear in 3 distinct consecutive layers.
   \end{enumerate}
-\end{restatable}
+\end{lem}
+% \end{restatable}
 
 Before proving \lemref{main}, we show how it implies \thmref{main}.
 Since layered pathwidth is monotone with respect to the addition of edges,
@@ -574,7 +638,7 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
   without loss of generality, that $\ell(y_j)=r+1$ (so $\ell(z_k)=r+2$
   and $\ell(x_i)=r+3$.)
 
-  Next, consider the graph $G_2$ induced by
+  Now, consider the graph $G_2$ induced by
   $\{x_i,\ldots,x_{n_1},y_j,\ldots,y_{n_2},z_k,\ldots,z_{n_3}\}$.
   We apply \lemref{main} inductively on $G_2$ relabelling tracks to
   ensure that in the resulting layered decomposition $\ell(y_j)=1$,
@@ -608,12 +672,13 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
 
   \begin{figure}
   \begin{center}
+  % \resizebox{\textwidth}{!}{
   \begin{tabular}{ccc}
-  \includegraphics[width=.31\textwidth]{figs/prism_graph-2} &
-  \includegraphics[width=.31\textwidth]{figs/prism_graph-3} &
-  \includegraphics[width=.31\textwidth]{figs/prism_graph-4} \\
+  \includegraphics{figs/prism_graph-2} &
+  \includegraphics{figs/prism_graph-3} &
+  \includegraphics{figs/prism_graph-4} \\
   (a) & (b) & (c)
-  \end{tabular}
+\end{tabular}%}
   \end{center}
   \caption{A three track graph $G$ with (a)~the spiral curve, (b)~edges spanning two layers highlighted, (c) the levelled planar graph $G-P$.}
   \figlabel{graph-path}
@@ -628,12 +693,13 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
 
 \begin{figure}
    \begin{center}
+    \resizebox{\textwidth}{!}{
      \begin{tabular}{ccc}
        \includegraphics[width=0.3\columnwidth]{figs/sloppy-1} &
        \includegraphics[width=0.3\columnwidth]{figs/sloppy-2} &
        \includegraphics[width=0.3\columnwidth]{figs/sloppy-3} \\
        (1) & (2) & (3)
-     \end{tabular}
+     \end{tabular}}
    \end{center}
    \caption{The path $P$ can always be extended.}
    \figlabel{sloppy}
@@ -685,15 +751,15 @@ By \lemref{main}, therefore $G$ has $\lpw_2(G)\le2$ and therefore, by
  \renewcommand{\thesubfigure}{\arabic{subfigure}}
   \begin{figure}
     \begin{center}
-    \begin{subfigure}[t]{0.3\hsize}\includegraphics[width=40mm]{figs/2layermaximum-1} \caption{}\end{subfigure}
-    \begin{subfigure}[t]{0.3\hsize}\includegraphics[width=40mm]{figs/2layermaximum-2} \caption{}\end{subfigure}
-    \begin{subfigure}[t]{0.3\hsize}\includegraphics[width=40mm]{figs/2layermaximum-3} \caption{}\end{subfigure}
+    \begin{subfigure}[t]{0.3\hsize}\includegraphics[width=36mm]{figs/2layermaximum-1} \caption{}\end{subfigure}
+    \begin{subfigure}[t]{0.3\hsize}\includegraphics[width=36mm]{figs/2layermaximum-2} \caption{}\end{subfigure}
+    \begin{subfigure}[t]{0.3\hsize}\includegraphics[width=36mm]{figs/2layermaximum-3} \caption{}\end{subfigure}
     \\[2ex]
-    \begin{subfigure}[t]{0.4\hsize}\includegraphics[width=40mm]{figs/2layermaximum-4} \caption{}\end{subfigure}
-    \begin{subfigure}[t]{0.4\hsize}\includegraphics[width=40mm]{figs/2layermaximum-5} \caption{}\end{subfigure}
+    \begin{subfigure}[t]{0.4\hsize}\includegraphics[width=36mm]{figs/2layermaximum-4} \caption{}\end{subfigure}
+    \begin{subfigure}[t]{0.4\hsize}\includegraphics[width=36mm]{figs/2layermaximum-5} \caption{}\end{subfigure}
     \\[2ex]
-    \begin{subfigure}[t]{0.4\hsize}\includegraphics[width=40mm]{figs/2layermaximum-6} \caption{}\end{subfigure}
-    \begin{subfigure}[t]{0.4\hsize}\includegraphics[width=40mm]{figs/2layermaximum-7} \caption{}\end{subfigure}
+    \begin{subfigure}[t]{0.4\hsize}\includegraphics[width=36mm]{figs/2layermaximum-6} \caption{}\end{subfigure}
+    \begin{subfigure}[t]{0.4\hsize}\includegraphics[width=36mm]{figs/2layermaximum-7} \caption{}\end{subfigure}
     \caption{The edge between a vertex $x_i$ and a vertex $y_j$ or $z_k$ cannot span more than 2 layers}
    \figlabel{2layermaximum}
  \end{center}
@@ -871,7 +937,7 @@ We conclude this discussion by remarking that upper bounds on the stack number o
 
 
 % Bibliography
-\bibliographystyle{plain}
+\bibliographystyle{plainurl}
 \bibliography{lpw}
 
 \end{document}
